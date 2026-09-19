@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="n1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#120309"/><stop offset="55%" stop-color="#3A0713"/>
+      <stop offset="100%" stop-color="#7A1028"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#n1)"/>
+  <circle cx="108" cy="86" r="34" fill="#F3D79A" opacity="0.9"/>
+  <circle cx="94" cy="76" r="30" fill="#120309" opacity="0.85"/>
+  <g fill="#F6EFE9" opacity="0.5">
+    <circle cx="210" cy="52" r="2.5"/><circle cx="286" cy="96" r="2"/><circle cx="352" cy="40" r="2.5"/>
+    <circle cx="424" cy="88" r="2"/><circle cx="494" cy="46" r="2.5"/><circle cx="548" cy="118" r="2"/>
+    <circle cx="164" cy="130" r="2"/><circle cx="246" cy="164" r="2"/><circle cx="466" cy="150" r="2.5"/>
+  </g>
+  <g fill="#2B0710">
+    <rect x="0" y="240" width="90" height="120"/><rect x="104" y="200" width="76" height="160"/>
+    <rect x="196" y="256" width="64" height="104"/><rect x="418" y="214" width="82" height="146"/>
+    <rect x="514" y="248" width="86" height="112"/>
+  </g>
+  <g fill="#E9B64C" opacity="0.55">
+    <rect x="16" y="262" width="11" height="15"/><rect x="48" y="296" width="11" height="15"/>
+    <rect x="120" y="224" width="11" height="15"/><rect x="152" y="270" width="11" height="15"/>
+    <rect x="212" y="282" width="11" height="15"/><rect x="438" y="240" width="11" height="15"/>
+    <rect x="470" y="294" width="11" height="15"/><rect x="536" y="272" width="11" height="15"/>
+  </g>
+  <rect y="360" width="600" height="90" fill="#1A040B"/>
+  <rect x="234" y="262" width="150" height="100" rx="8" fill="#0A0206" stroke="#A61C3C" stroke-width="3"/>
+  <g fill="#E9B64C" opacity="0.9">
+    <rect x="248" y="280" width="46" height="7" rx="3"/>
+    <rect x="248" y="296" width="82" height="7" rx="3" opacity="0.6"/>
+    <rect x="260" y="312" width="64" height="7" rx="3" opacity="0.8"/>
+    <rect x="248" y="328" width="34" height="7" rx="3"/>
+  </g>
+  <rect x="292" y="362" width="34" height="10" fill="#2B0710"/>
+  <rect x="262" y="372" width="94" height="10" rx="5" fill="#3A0713"/>
+  <g fill="#120309">
+    <circle cx="160" cy="330" r="19"/>
+    <path d="M140 352 L180 352 L192 420 L128 420 Z"/>
+  </g>
+  <ellipse cx="160" cy="424" rx="54" ry="8" fill="#0A0206" opacity="0.5"/>
+</svg>

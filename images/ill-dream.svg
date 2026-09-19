@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="d1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E9B64C"/><stop offset="42%" stop-color="#A61C3C"/>
+      <stop offset="100%" stop-color="#3A0713"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#d1)"/>
+  <circle cx="470" cy="140" r="62" fill="#F3D79A" opacity="0.9"/>
+  <g fill="#2B0710" opacity="0.92">
+    <rect x="0" y="128" width="118" height="205"/><rect x="128" y="86" width="102" height="247"/>
+    <rect x="244" y="148" width="92" height="185"/><rect x="350" y="108" width="112" height="225"/>
+    <rect x="476" y="162" width="124" height="171"/>
+  </g>
+  <g fill="#E9B64C" opacity="0.8">
+    <rect x="18" y="150" width="13" height="17"/><rect x="52" y="186" width="13" height="17"/>
+    <rect x="86" y="150" width="13" height="17"/><rect x="150" y="118" width="13" height="17"/>
+    <rect x="186" y="168" width="13" height="17"/><rect x="262" y="178" width="13" height="17"/>
+    <rect x="300" y="226" width="13" height="17"/><rect x="372" y="138" width="13" height="17"/>
+    <rect x="418" y="194" width="13" height="17"/><rect x="500" y="198" width="13" height="17"/>
+    <rect x="548" y="246" width="13" height="17"/>
+  </g>
+  <rect y="330" width="600" height="120" fill="#5A1122"/>
+  <path d="M0 330 Q150 318 300 332 T600 330 L600 362 L0 362 Z" fill="#701529"/>
+  <g fill="#3A0713"><rect x="60" y="292" width="26" height="40" rx="3"/><rect x="210" y="292" width="26" height="40" rx="3"/></g>
+  <g fill="#1A040B">
+    <circle cx="380" cy="250" r="20"/>
+    <path d="M364 274 L396 274 L406 346 L390 346 L380 304 L370 346 L354 346 Z"/>
+    <path d="M366 280 L336 318 L326 310 L356 268 Z"/>
+    <path d="M370 346 L360 402 L378 402 L388 350 Z"/>
+    <path d="M390 346 L404 402 L422 402 L404 350 Z"/>
+  </g>
+  <g transform="translate(316 378)">
+    <circle r="26" fill="#F6EFE9"/>
+    <path d="M0 -13 L11 -5 L7 8 L-7 8 L-11 -5 Z" fill="#3A0713"/>
+  </g>
+  <ellipse cx="380" cy="410" rx="70" ry="10" fill="#1A040B" opacity="0.3"/>
+</svg>

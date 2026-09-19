@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1A040B"/><stop offset="100%" stop-color="#4D0E1D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0%" stop-color="#E9B64C" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E9B64C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#c1)"/>
+  <rect width="600" height="450" fill="url(#glow)"/>
+  <rect x="96" y="86" width="408" height="252" rx="14" fill="#120309" stroke="#7A1028" stroke-width="4"/>
+  <rect x="96" y="86" width="408" height="34" rx="14" fill="#2B0710"/>
+  <circle cx="122" cy="103" r="6" fill="#A61C3C"/><circle cx="144" cy="103" r="6" fill="#E9B64C"/><circle cx="166" cy="103" r="6" fill="#F3D79A"/>
+  <g opacity="0.95">
+    <rect x="122" y="144" width="54" height="9" rx="4" fill="#E9B64C"/>
+    <rect x="184" y="144" width="128" height="9" rx="4" fill="#F6EFE9" opacity="0.6"/>
+    <rect x="140" y="170" width="86" height="9" rx="4" fill="#A61C3C"/>
+    <rect x="234" y="170" width="168" height="9" rx="4" fill="#F6EFE9" opacity="0.4"/>
+    <rect x="140" y="196" width="140" height="9" rx="4" fill="#F3D79A"/>
+    <rect x="288" y="196" width="62" height="9" rx="4" fill="#F6EFE9" opacity="0.4"/>
+    <rect x="158" y="222" width="104" height="9" rx="4" fill="#F6EFE9" opacity="0.55"/>
+    <rect x="270" y="222" width="150" height="9" rx="4" fill="#A61C3C"/>
+    <rect x="140" y="248" width="70" height="9" rx="4" fill="#E9B64C"/>
+    <rect x="218" y="248" width="112" height="9" rx="4" fill="#F6EFE9" opacity="0.4"/>
+    <rect x="122" y="274" width="44" height="9" rx="4" fill="#F3D79A"/>
+    <rect x="122" y="300" width="14" height="10" rx="2" fill="#E9B64C"/>
+  </g>
+  <rect x="234" y="338" width="132" height="14" fill="#2B0710"/>
+  <rect x="186" y="352" width="228" height="14" rx="6" fill="#3A0713"/>
+  <g fill="#F6EFE9" opacity="0.18">
+    <circle cx="70" cy="70" r="3"/><circle cx="530" cy="112" r="3"/><circle cx="556" cy="300" r="3"/>
+    <circle cx="48" cy="270" r="3"/><circle cx="512" cy="400" r="3"/><circle cx="90" cy="392" r="3"/>
+  </g>
+</svg>

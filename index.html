@@ -3,243 +3,405 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Исраилов Расул — футболист сборной Таджикистана</title>
-<meta name="description" content="Официальный сайт Исраилова Расула — 18-летнего нападающего из Таджикистана. История пути, статистика, достижения.">
+<title>Исраилов Мухаммадрасул — портфолио</title>
+<meta name="description" content="Портфолио Исраилова Мухаммадрасула: путь от профессионального футбола к разработке. Команда из трёх друзей, одна общая цель.">
+<meta name="theme-color" content="#7A1028">
+<meta property="og:title" content="Исраилов Мухаммадрасул — портфолио">
+<meta property="og:description" content="Мечтал стать футболистом — стал. Здоровье подвело — начал заново. Теперь пишу код.">
+<meta property="og:image" content="images/photo/rasul-studio.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ПРЕЛОАДЕР -->
+<!-- ═══ ПРЕЛОАДЕР ═══ -->
 <div class="preloader" id="preloader">
-  <div class="loader-ball"></div>
-  <p>Выходим на поле…</p>
+  <div class="pre-inner">
+    <div class="pre-name">
+      <span>И</span><span>С</span><span>Р</span><span>А</span><span>И</span><span>Л</span><span>О</span><span>В</span>
+    </div>
+    <div class="pre-bar"><i id="preBar"></i></div>
+    <div class="pre-count"><span id="preCount">0</span>%</div>
+  </div>
 </div>
 
-<div class="scroll-progress" id="scrollProgress"></div>
+<!-- ═══ ДЕКОР ═══ -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="glow-follow" id="glowFollow" aria-hidden="true"></div>
 
-<!-- НАВИГАЦИЯ -->
+<!-- ═══ НАВИГАЦИЯ ═══ -->
 <header class="navbar" id="navbar">
-  <a href="#hero" class="logo">ИР<span>10</span></a>
+  <a href="#hero" class="logo" data-magnet>ИМ<span>.</span></a>
   <nav class="nav-links" id="navLinks">
     <a href="#about">Обо мне</a>
-    <a href="#story">Мой путь</a>
-    <a href="#stats">Статистика</a>
-    <a href="#achievements">Достижения</a>
-    <a href="#gallery">Галерея</a>
-    <a href="#contact" class="nav-cta">Связаться</a>
+    <a href="#story">История</a>
+    <a href="#skills">Навыки</a>
+    <a href="#team">Команда</a>
+    <a href="#gallery">Фото</a>
+    <a href="#contact" class="nav-cta" data-magnet>Связаться</a>
   </nav>
   <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
 </header>
 
-<!-- ГЛАВНЫЙ ЭКРАН -->
+<!-- ═══ ГЛАВНЫЙ ЭКРАН ═══ -->
 <section class="hero" id="hero">
-  <img src="images/hero-stadium.svg" alt="Стадион под светом прожекторов" class="hero-bg">
-  <div class="hero-overlay"></div>
+  <div class="hero-aura"></div>
+  <div class="hero-grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
   <div class="hero-inner">
-    <p class="hero-tag reveal">Нападающий · №10 · Таджикистан 🇹🇯</p>
-    <h1 class="hero-name reveal">
-      <span class="line">Исраилов</span>
-      <span class="line accent">Расул</span>
-    </h1>
-    <p class="hero-desc reveal">
-      18 лет. Начинал во дворе с мячом, перемотанным скотчем, —
-      сегодня выхожу на поле под свет прожекторов.
-      Это история о том, как из ничего можно сделать всё.
-    </p>
-    <div class="hero-buttons reveal">
-      <a href="#story" class="btn btn-primary">Моя история</a>
-      <a href="#stats" class="btn btn-ghost">Статистика</a>
+    <div class="hero-left">
+      <p class="hero-tag"><i class="dot"></i> Душанбе → код · 2026</p>
+
+      <h1 class="hero-name">
+        <span class="hn-row" data-split>Исраилов</span>
+        <span class="hn-row"><span class="hn-slide accent">Мухаммадрасул</span></span>
+      </h1>
+
+      <p class="hero-role">
+        <span class="role-static">Я</span>
+        <span class="role-rotator" id="roleRotator"><b>разработчик</b></span>
+      </p>
+
+      <p class="hero-desc">
+        В детстве я мечтал стать профессиональным футболистом — и стал им.
+        А потом, в самый нужный момент, меня подвело здоровье.
+        Сегодня я собираю то же самое чувство — из кода.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#story" class="btn btn-primary" data-magnet><span>Моя история</span></a>
+        <a href="#team" class="btn btn-ghost" data-magnet><span>Наша команда</span></a>
+      </div>
+
+      <div class="hero-quick">
+        <div><b data-target="12">0</b><span>лет в футболе</span></div>
+        <div><b data-target="3">0</b><span>человека в команде</span></div>
+        <div><b data-target="1">0</b><span>общая цель</span></div>
+      </div>
     </div>
-    <div class="hero-quickstats reveal">
-      <div><b>22</b><span>гола за сезон</span></div>
-      <div><b>27</b><span>матчей</span></div>
-      <div><b>11</b><span>ассистов</span></div>
+
+    <div class="hero-right">
+      <div class="portrait-frame" data-tilt>
+        <div class="pf-ring"></div>
+        <div class="pf-ring pf-ring-2"></div>
+        <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" class="pf-img">
+        <div class="pf-badge"><b>2026</b><span>разработчик</span></div>
+        <div class="pf-tape">available for work</div>
+      </div>
     </div>
   </div>
-  <a href="#about" class="scroll-hint" aria-label="Листай вниз"><span></span></a>
+
+  <a href="#about" class="scroll-hint" aria-label="Листай вниз"><span></span><i>скролл</i></a>
 </section>
 
-<!-- БЕГУЩАЯ СТРОКА -->
+<!-- ═══ БЕГУЩАЯ СТРОКА ═══ -->
 <div class="marquee">
   <div class="marquee-track">
-    <span>СКОРОСТЬ</span><i>●</i><span>ТЕХНИКА</span><i>●</i><span>ХАРАКТЕР</span><i>●</i>
-    <span>ГОЛЫ</span><i>●</i><span>ДИСЦИПЛИНА</span><i>●</i><span>ТАДЖИКИСТАН</span><i>●</i>
-    <span>СКОРОСТЬ</span><i>●</i><span>ТЕХНИКА</span><i>●</i><span>ХАРАКТЕР</span><i>●</i>
-    <span>ГОЛЫ</span><i>●</i><span>ДИСЦИПЛИНА</span><i>●</i><span>ТАДЖИКИСТАН</span><i>●</i>
+    <span>ХАРАКТЕР</span><i>✦</i><span>КОД</span><i>✦</i><span>ФУТБОЛ</span><i>✦</i><span>КОМАНДА</span><i>✦</i>
+    <span>ДИСЦИПЛИНА</span><i>✦</i><span>ТАДЖИКИСТАН</span><i>✦</i>
+    <span>ХАРАКТЕР</span><i>✦</i><span>КОД</span><i>✦</i><span>ФУТБОЛ</span><i>✦</i><span>КОМАНДА</span><i>✦</i>
+    <span>ДИСЦИПЛИНА</span><i>✦</i><span>ТАДЖИКИСТАН</span><i>✦</i>
   </div>
 </div>
 
-<!-- ОБО МНЕ -->
+<!-- ═══ ОБО МНЕ ═══ -->
 <section class="about" id="about">
   <div class="section-head reveal">
     <span class="eyebrow">01 — Знакомство</span>
-    <h2>Обо мне</h2>
+    <h2 class="sec-title" data-split-words>Обо мне</h2>
   </div>
+
   <div class="about-grid">
-    <div class="about-photo reveal">
-      <img src="images/portrait.svg" alt="Исраилов Расул">
-      <div class="photo-badge"><b>№10</b><span>Нападающий</span></div>
+    <div class="about-photo reveal" data-tilt>
+      <div class="ap-shape"></div>
+      <img src="images/photo/rasul-bench.jpg" alt="Исраилов Мухаммадрасул">
+      <div class="ap-caption"><b>Тогда</b><span>скамейка вместо поля</span></div>
     </div>
+
     <div class="about-text reveal">
-      <p class="lead">Меня зовут Расул Исраилов. Мне 18 лет, и футбол — это не то,
-      чем я занимаюсь. Это то, кем я являюсь.</p>
-      <p>Я вырос в обычном районе, где поле было из утоптанной земли, а воротами
-      служили два кирпича. Никто не давал мне шанс — я забирал его сам. Каждое утро
-      до школы, каждый вечер после. Пока другие спали, я отрабатывал удар в стенку.</p>
-      <p>Сегодня я выступаю в высшем дивизионе Таджикистана и ношу номер 10.
-      Но для меня главное не цифры в протоколе, а то, что мальчишки из таких же
-      дворов, как мой, смотрят и верят: получится и у них.</p>
+      <p class="lead">Меня зовут Мухаммадрасул. Друзья зовут Расулом. Двенадцать лет
+      я жил футболом, а теперь учусь жить кодом — и, кажется, это одно и то же.</p>
+
+      <p>Мяч появился у меня раньше, чем первый портфель. Двор, два кирпича вместо ворот,
+      игра до темноты, пока мамы не начинали кричать из окон. Я был тем самым пацаном,
+      который оставался бить по стенке, когда все уже разошлись по домам.</p>
+
+      <p>Я дошёл до профессионального уровня — контракт, сборы, форма с моей фамилией на спине.
+      А потом здоровье сказало «стоп» ровно в тот момент, когда всё только начиналось.
+      Не в межсезонье, не после карьеры. В самый нужный момент.</p>
+
+      <p>Полгода я не знал, кто я без мяча. А потом открыл ноутбук — и понял,
+      что дисциплина, выносливость и умение терпеть переносятся куда угодно.
+      В разработке всё то же самое: тренировка, разбор ошибок, команда рядом.</p>
 
       <div class="facts">
-        <div class="fact"><span>Возраст</span><b>18 лет</b></div>
-        <div class="fact"><span>Позиция</span><b>Нападающий</b></div>
-        <div class="fact"><span>Рост</span><b>178 см</b></div>
-        <div class="fact"><span>Вес</span><b>70 кг</b></div>
-        <div class="fact"><span>Нога</span><b>Правая</b></div>
+        <div class="fact"><span>Имя</span><b>Мухаммадрасул</b></div>
+        <div class="fact"><span>Сейчас</span><b>Разработчик</b></div>
+        <div class="fact"><span>Раньше</span><b>Нападающий</b></div>
+        <div class="fact"><span>Команда</span><b>3 человека</b></div>
         <div class="fact"><span>Страна</span><b>Таджикистан</b></div>
+        <div class="fact"><span>Топливо</span><b>Упрямство</b></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- МОЙ ПУТЬ -->
+<!-- ═══ ИСТОРИЯ ═══ -->
 <section class="story" id="story">
   <div class="section-head reveal">
-    <span class="eyebrow">02 — Путь с нуля</span>
-    <h2>Мой путь</h2>
-    <p class="section-sub">Три главы, которые сделали меня тем, кто я есть.</p>
+    <span class="eyebrow">02 — Путь</span>
+    <h2 class="sec-title" data-split-words>Как это было</h2>
+    <p class="section-sub">Шесть глав: от двора до первого коммита.</p>
   </div>
 
+  <div class="story-line" aria-hidden="true"><i id="storyLine"></i></div>
+
   <article class="chapter reveal">
-    <div class="chapter-img"><img src="images/g-yard.svg" alt="Двор, где всё начиналось"><span class="chapter-num">01</span></div>
+    <div class="chapter-img" data-tilt><img src="images/ill-dream.svg" alt="Двор и первый мяч"><span class="chapter-num">01</span></div>
     <div class="chapter-text">
-      <h3>Двор, кирпичи вместо ворот</h3>
-      <p>Мне было шесть, когда старший брат вынес во двор старый мяч. Он был
-      тяжёлый, с ободранным боком, и после дождя становился как камень.
-      Мы играли до темноты — пока мамы не начинали кричать из окон.</p>
-      <p>У меня не было бутс. Первые два года я играл в кедах, которые были
-      на размер больше, и набивал в носок газету, чтобы нога не болталась.
-      Тогда я думал, что это нормально. Сейчас понимаю — именно там я научился
-      работать с мячом на плохом покрытии. Асфальт не прощает лишнего касания.</p>
-      <blockquote>«Если ты научился обводить на разбитом асфальте — на газоне тебе будет легко.»</blockquote>
+      <h3>Мяч дороже всего</h3>
+      <p>Мне было шесть, когда старший двоюродный брат вынес во двор мяч с ободранным боком.
+      После дождя он становился как камень, и бить по нему босиком было чистым безумием —
+      мы всё равно били.</p>
+      <p>Бутс не было. Первые два года я играл в кедах на размер больше и набивал
+      в носок газету, чтобы нога не болталась. Тогда я считал это нормой.
+      Сейчас понимаю: именно на этом разбитом асфальте я научился первому касанию —
+      там его просто нельзя было испортить.</p>
+      <blockquote>«Если ты обыграл человека на асфальте — на газоне тебе будет скучно.»</blockquote>
     </div>
   </article>
 
   <article class="chapter reverse reveal">
-    <div class="chapter-img"><img src="images/g-injury.svg" alt="Травма и восстановление"><span class="chapter-num">02</span></div>
+    <div class="chapter-img" data-tilt><img src="images/ill-pitch.svg" alt="Свет прожекторов"><span class="chapter-num">02</span></div>
     <div class="chapter-text">
-      <h3>Отказы, травма и сомнения</h3>
-      <p>В 12 лет меня не взяли в футбольную школу. Тренер посмотрел на меня
-      минуту и сказал: «Слишком мелкий, слишком худой. Приходи через год».
-      Я пришёл через год. Он снова сказал «нет». Я пришёл и на третий.</p>
-      <p>В 15 лет — травма колена. Четыре месяца без мяча. Врач говорил
-      осторожно, родители — прямо: «Бросай, займись учёбой, футбол тебя не прокормит».
-      Это были самые тяжёлые месяцы в моей жизни. Я приходил на тренировки просто
-      посидеть на скамейке и посмотреть, потому что без этого не мог.</p>
-      <p>Я вернулся. Медленнее, слабее, но вернулся — и за полгода набрал форму лучше,
-      чем была до травмы. Потому что за эти четыре месяца я понял, чего мне это стоит.</p>
-      <blockquote>«Мне говорили „нет“ столько раз, что я просто перестал слышать это слово.»</blockquote>
+      <h3>Мечта, которая сбылась</h3>
+      <p>В двенадцать меня не взяли в футбольную школу: «Слишком мелкий, приходи через год».
+      Я пришёл через год. Услышал «нет» снова. Пришёл и на третий раз — меня взяли,
+      кажется, просто из уважения к упрямству.</p>
+      <p>Дальше всё поехало быстро: дубль, сборы, первая форма с моей фамилией на спине.
+      Я помню не свой дебютный гол, а звук — как выдохнули трибуны. Детская мечта
+      официально стала моей профессией, и в тот вечер я честно думал, что больше
+      ничего доказывать не придётся.</p>
+      <blockquote>«Мне говорили „нет“ столько раз, что я перестал слышать это слово.»</blockquote>
     </div>
   </article>
 
   <article class="chapter reveal">
-    <div class="chapter-img"><img src="images/g-goal.svg" alt="Прорыв и первый гол"><span class="chapter-num">03</span></div>
+    <div class="chapter-img" data-tilt><img src="images/ill-break.svg" alt="Травма"><span class="chapter-num">03</span></div>
     <div class="chapter-text">
-      <h3>Прорыв</h3>
-      <p>В 16 меня наконец заметили на районном турнире — я забил четыре мяча
-      в одном матче. Через неделю позвали на просмотр в дубль. Ещё через год
-      я вышел на замену в основе на 78-й минуте и забил свой первый гол
-      на профессиональном уровне.</p>
-      <p>Я до сих пор помню этот звук. Не свой крик — а то, как выдохнули трибуны.
-      После игры ко мне подошёл тот самый тренер, который трижды сказал мне «нет».
-      Он просто пожал руку и ничего не сказал. Мне и не нужно было.</p>
-      <p>Сегодня мне 18. Впереди сборная, еврокубки, большая Европа.
-      Но я никогда не забуду двор, кирпичи и кеды с газетой внутри.</p>
-      <blockquote>«Талант — это то, с чего начинают. Характер — это то, чем заканчивают.»</blockquote>
+      <h3>Когда тело сказало «стоп»</h3>
+      <p>Здоровье подвело меня в самый нужный момент — не в межсезонье,
+      не в конце карьеры, а ровно тогда, когда открывалась главная дверь.
+      Сначала я думал, что это на месяц. Потом — что до конца сезона.
+      Потом врач посмотрел на снимки и надолго замолчал.</p>
+      <p>Самое тяжёлое было не в боли. Тяжело было приходить на базу просто посидеть на скамейке
+      и посмотреть, как бегут остальные. Я сидел в наушниках, смотрел на поле и не понимал,
+      кто я такой, если у меня забрать мяч.</p>
+      <blockquote>«Я потерял не игру. Я на полгода потерял ответ на вопрос „кто я“.»</blockquote>
+    </div>
+  </article>
+
+  <article class="chapter reverse reveal">
+    <div class="chapter-img" data-tilt><img src="images/ill-night.svg" alt="Ночь и ноутбук"><span class="chapter-num">04</span></div>
+    <div class="chapter-text">
+      <h3>Ноутбук вместо бутс</h3>
+      <p>Ноутбук мне достался старый, он грелся так, что зимой я держал на нём руки.
+      Первая программа вывела <code>Привет, мир</code> — и я, взрослый парень,
+      который забивал при трибунах, сидел и улыбался экрану, как дурак.</p>
+      <p>Первый месяц я почти ничего не понимал. Ошибка на ошибке, красный текст в консоли,
+      и никого, кто объяснит. Но у меня было преимущество, о котором я тогда не догадывался:
+      я двенадцать лет подряд делал одно и то же движение по тысяче раз в день.
+      Повторение меня не пугало. Повторение — это мой родной язык.</p>
+      <blockquote>«Баг — это защитник. Он просто стоит между мной и воротами.»</blockquote>
+    </div>
+  </article>
+
+  <article class="chapter reveal">
+    <div class="chapter-img" data-tilt><img src="images/ill-code.svg" alt="Первый проект"><span class="chapter-num">05</span></div>
+    <div class="chapter-text">
+      <h3>Первый настоящий проект</h3>
+      <p>Через год я дописал свой первый сайт от начала до конца. Ночь, 3:40,
+      всё наконец собралось — и я поймал ровно то же чувство, что и после гола.
+      Тот же холодок, та же тишина внутри. Тогда я окончательно понял, что не ушёл из спорта.
+      Я просто сменил поле.</p>
+      <p>Футбол научил меня вещам, которым не учат на курсах: проигрывать и приходить
+      на следующий день, слышать тренера, когда он орёт по делу, и доигрывать матч,
+      даже если счёт уже не в твою пользу. Дедлайн после этого — совсем не страшно.</p>
+      <blockquote>«Код — это тренировка, которую можно повторять бесконечно, не ломая колено.»</blockquote>
+    </div>
+  </article>
+
+  <article class="chapter reverse reveal">
+    <div class="chapter-img" data-tilt><img src="images/ill-team.svg" alt="Команда из трёх друзей"><span class="chapter-num">06</span></div>
+    <div class="chapter-text">
+      <h3>Нас трое</h3>
+      <p>Одному было тяжело — и я позвал друзей. Нас трое: мы знакомы задолго до кода,
+      и это оказалось важнее любого стека. Мы спорим до хрипоты, переписываем друг за другом,
+      но ни разу не разошлись по разным сторонам.</p>
+      <p>У нас одна общая цель — вырасти из троих друзей с ноутбуками в команду,
+      которая делает продукты, нужные людям у нас дома. Не «когда-нибудь уехать»,
+      а построить это здесь.</p>
+      <blockquote>«Один игрок выигрывает матч. Команда выигрывает сезон.»</blockquote>
     </div>
   </article>
 </section>
 
-<!-- СТАТИСТИКА -->
-<section class="stats" id="stats">
+<!-- ═══ НАВЫКИ ═══ -->
+<section class="skills" id="skills">
   <div class="section-head reveal">
-    <span class="eyebrow">03 — Цифры</span>
-    <h2>Статистика сезона</h2>
-  </div>
-  <div class="stats-grid">
-    <div class="stat-card reveal"><span class="stat-number" data-target="27">0</span><span class="stat-label">Матчей</span></div>
-    <div class="stat-card reveal"><span class="stat-number" data-target="22">0</span><span class="stat-label">Голов</span></div>
-    <div class="stat-card reveal"><span class="stat-number" data-target="11">0</span><span class="stat-label">Ассистов</span></div>
-    <div class="stat-card reveal"><span class="stat-number" data-target="6">0</span><span class="stat-label">Наград «Игрок матча»</span></div>
+    <span class="eyebrow">03 — Инструменты</span>
+    <h2 class="sec-title" data-split-words>Что я умею</h2>
+    <p class="section-sub">Стек растёт, но принцип тот же: тренировка каждый день.</p>
   </div>
 
-  <div class="skills reveal">
-    <h3>Сильные стороны</h3>
-    <div class="skill"><div class="skill-top"><span>Скорость</span><b>94</b></div><div class="bar"><i data-val="94"></i></div></div>
-    <div class="skill"><div class="skill-top"><span>Завершение</span><b>89</b></div><div class="bar"><i data-val="89"></i></div></div>
-    <div class="skill"><div class="skill-top"><span>Дриблинг</span><b>91</b></div><div class="bar"><i data-val="91"></i></div></div>
-    <div class="skill"><div class="skill-top"><span>Пас</span><b>82</b></div><div class="bar"><i data-val="82"></i></div></div>
-    <div class="skill"><div class="skill-top"><span>Характер</span><b>99</b></div><div class="bar"><i data-val="99"></i></div></div>
+  <div class="skills-wrap">
+    <div class="skill-bars reveal">
+      <div class="skill"><div class="skill-top"><span>HTML / CSS</span><b>92</b></div><div class="bar"><i data-val="92"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>JavaScript</span><b>84</b></div><div class="bar"><i data-val="84"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Python</span><b>78</b></div><div class="bar"><i data-val="78"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Git / GitHub</span><b>80</b></div><div class="bar"><i data-val="80"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Работа в команде</span><b>97</b></div><div class="bar"><i data-val="97"></i></div></div>
+      <div class="skill"><div class="skill-top"><span>Характер</span><b>99</b></div><div class="bar"><i data-val="99"></i></div></div>
+    </div>
+
+    <div class="skill-cards">
+      <div class="scard reveal"><span class="sc-ico">⚡</span><h4>Фронтенд</h4><p>Вёрстка, адаптив, анимации и интерфейсы, которые приятно трогать.</p></div>
+      <div class="scard reveal"><span class="sc-ico">🧠</span><h4>Логика</h4><p>Python и алгоритмы: разбираю задачу так же, как разбирал соперника.</p></div>
+      <div class="scard reveal"><span class="sc-ico">🤝</span><h4>Командность</h4><p>Двенадцать лет в раздевалке. Спорить по делу и держать пас — умею.</p></div>
+      <div class="scard reveal"><span class="sc-ico">🔥</span><h4>Дисциплина</h4><p>Пять тренировок в неделю двенадцать лет подряд. Дедлайн не страшен.</p></div>
+    </div>
   </div>
 </section>
 
-<!-- ДОСТИЖЕНИЯ -->
-<section class="achievements" id="achievements">
+<!-- ═══ КОМАНДА ═══ -->
+<section class="team" id="team">
   <div class="section-head reveal">
-    <span class="eyebrow">04 — Трофеи</span>
-    <h2>Достижения</h2>
+    <span class="eyebrow">04 — Мы</span>
+    <h2 class="sec-title" data-split-words>Команда</h2>
+    <p class="section-sub">Три человека, одна цель. Сначала друзья — потом уже разработчики.</p>
   </div>
-  <div class="timeline">
-    <div class="timeline-item reveal"><span class="year">2026</span><h4>Лучший бомбардир Высшей лиги</h4><p>22 гола в 27 матчах — лучший результат сезона.</p></div>
-    <div class="timeline-item reveal"><span class="year">2025</span><h4>Дебют за сборную Таджикистана</h4><p>Первый вызов в национальную команду в 18 лет.</p></div>
-    <div class="timeline-item reveal"><span class="year">2025</span><h4>Открытие сезона</h4><p>Признан лучшим молодым игроком чемпионата.</p></div>
-    <div class="timeline-item reveal"><span class="year">2024</span><h4>Первый профессиональный гол</h4><p>Выход на замену и гол на 84-й минуте.</p></div>
-    <div class="timeline-item reveal"><span class="year">2023</span><h4>MVP юношеского турнира U-18</h4><p>Тот самый турнир, после которого всё изменилось.</p></div>
+
+  <div class="team-grid">
+    <article class="tcard reveal" data-tilt>
+      <div class="tc-num">01</div>
+      <div class="tc-avatar"><img src="images/photo/rasul-studio.jpg" alt="Мухаммадрасул"></div>
+      <h4>Мухаммадрасул</h4>
+      <p class="tc-role">Фронтенд · капитан</p>
+      <p class="tc-text">Собираю интерфейсы и держу темп команды. Бывший нападающий — привычка бежать вперёд осталась.</p>
+      <div class="tc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+    </article>
+
+    <article class="tcard reveal" data-tilt>
+      <div class="tc-num">02</div>
+      <div class="tc-avatar tc-initial"><b>A</b></div>
+      <h4>Друг №2</h4>
+      <p class="tc-role">Бэкенд · мозг</p>
+      <p class="tc-text">Тот, кто задаёт неудобные вопросы на старте и спасает проект за день до дедлайна.</p>
+      <div class="tc-tags"><span>Python</span><span>API</span><span>БД</span></div>
+    </article>
+
+    <article class="tcard reveal" data-tilt>
+      <div class="tc-num">03</div>
+      <div class="tc-avatar tc-initial"><b>S</b></div>
+      <h4>Друг №3</h4>
+      <p class="tc-role">Дизайн · глаз</p>
+      <p class="tc-text">Видит криво выровненный пиксель раньше, чем мы успеваем открыть файл.</p>
+      <div class="tc-tags"><span>UI</span><span>Figma</span><span>Бренд</span></div>
+    </article>
+  </div>
+
+  <div class="team-goal reveal">
+    <span class="tg-label">Наша общая цель</span>
+    <p>Вырасти из трёх друзей с ноутбуками в студию, которая делает продукты
+    для людей у нас дома — и доказать, что для этого не обязательно уезжать.</p>
   </div>
 </section>
 
-<!-- ГАЛЕРЕЯ -->
+<!-- ═══ ПРИНЦИПЫ ═══ -->
+<section class="values">
+  <div class="section-head reveal">
+    <span class="eyebrow">05 — Принципы</span>
+    <h2 class="sec-title" data-split-words>Во что я верю</h2>
+  </div>
+  <div class="values-grid">
+    <div class="vcard reveal"><b>01</b><h4>Повторение решает</h4><p>Талант — это старт. Дальше выигрывает тот, кто повторяет дольше всех.</p></div>
+    <div class="vcard reveal"><b>02</b><h4>План «Б» — не предательство</h4><p>Я не бросил мечту. Я перенёс её на другое поле.</p></div>
+    <div class="vcard reveal"><b>03</b><h4>Команда важнее звезды</h4><p>Сольный гол красивый. Но чемпионство берут вместе.</p></div>
+    <div class="vcard reveal"><b>04</b><h4>Проигрыш — это данные</h4><p>Разбор ошибок после матча дал мне больше, чем все победы.</p></div>
+  </div>
+</section>
+
+<!-- ═══ ГАЛЕРЕЯ ═══ -->
 <section class="gallery" id="gallery">
   <div class="section-head reveal">
-    <span class="eyebrow">05 — Моменты</span>
-    <h2>Галерея</h2>
+    <span class="eyebrow">06 — Моменты</span>
+    <h2 class="sec-title" data-split-words>Кадры</h2>
   </div>
+
   <div class="gallery-grid">
-    <figure class="gallery-item wide reveal"><img src="images/g-goal.svg" alt="Гол"><figcaption>Гол в ворота лидера чемпионата</figcaption></figure>
-    <figure class="gallery-item reveal"><img src="images/g-trophy.svg" alt="Трофей"><figcaption>Награждение по итогам сезона</figcaption></figure>
-    <figure class="gallery-item reveal"><img src="images/g-training.svg" alt="Тренировка"><figcaption>Утренняя тренировка</figcaption></figure>
-    <figure class="gallery-item reveal"><img src="images/g-boots.svg" alt="Бутсы"><figcaption>Первые настоящие бутсы</figcaption></figure>
-    <figure class="gallery-item wide reveal"><img src="images/g-national.svg" alt="Сборная"><figcaption>В составе сборной Таджикистана</figcaption></figure>
+    <figure class="gitem wide reveal">
+      <img src="images/photo/rasul-bench.jpg" alt="Расул на скамейке">
+      <figcaption><b>Пауза</b><span>Скамейка, на которой я много думал</span></figcaption>
+    </figure>
+    <figure class="gitem reveal">
+      <img src="images/photo/rasul-studio.jpg" alt="Студийный портрет">
+      <figcaption><b>Сегодня</b><span>Новый образ, тот же характер</span></figcaption>
+    </figure>
+    <figure class="gitem reveal">
+      <img src="images/photo/rasul-cafe.jpg" alt="Работа за телефоном">
+      <figcaption><b>Между делом</b><span>Код не отпускает даже за столом</span></figcaption>
+    </figure>
+    <figure class="gitem wide reveal">
+      <img src="images/photo/rasul-evening.jpg" alt="Вечер">
+      <figcaption><b>Вечер</b><span>Лучшие идеи приходят после заката</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ЦИТАТА -->
-<section class="bigquote reveal">
-  <p>«Меня не взяли трижды. Я пришёл в четвёртый раз — и забил четыре.»</p>
-  <span>— Расул Исраилов</span>
+<!-- ═══ ЦИТАТА ═══ -->
+<section class="bigquote">
+  <div class="bq-inner reveal">
+    <span class="bq-mark">“</span>
+    <p>Футбол забрал у меня колено, но оставил характер.<br>С характером можно начать что угодно заново.</p>
+    <span class="bq-author">— Мухаммадрасул Исраилов</span>
+  </div>
 </section>
 
-<!-- КОНТАКТЫ -->
+<!-- ═══ КОНТАКТЫ ═══ -->
 <section class="contact" id="contact">
   <div class="section-head reveal">
-    <span class="eyebrow">06 — Контакты</span>
-    <h2>Связаться со мной</h2>
-    <p class="section-sub">Сотрудничество, интервью, спонсорство и предложения от клубов.</p>
+    <span class="eyebrow">07 — Связь</span>
+    <h2 class="sec-title" data-split-words>Напишите мне</h2>
+    <p class="section-sub">Проекты, совместная работа, стажировка или просто поговорить о футболе.</p>
   </div>
-  <div class="contact-links reveal">
-    <a href="mailto:irasik2211@gmail.com"><b>Email</b><span>irasik2211@gmail.com</span></a>
-    <a href="#"><b>Instagram</b><span>@israilov.rasul</span></a>
-    <a href="#"><b>TikTok</b><span>@rasul10</span></a>
-    <a href="#"><b>Telegram</b><span>@rasul10</span></a>
+
+  <div class="contact-links">
+    <a href="mailto:irasik2211@gmail.com" class="clink reveal" data-magnet>
+      <b>Email</b><span>irasik2211@gmail.com</span><i>→</i>
+    </a>
+    <a href="https://github.com/Rasul2211" target="_blank" rel="noopener" class="clink reveal" data-magnet>
+      <b>GitHub</b><span>@Rasul2211</span><i>→</i>
+    </a>
+    <a href="https://t.me/" target="_blank" rel="noopener" class="clink reveal" data-magnet>
+      <b>Telegram</b><span>напишите в личные</span><i>→</i>
+    </a>
+    <a href="https://instagram.com/" target="_blank" rel="noopener" class="clink reveal" data-magnet>
+      <b>Instagram</b><span>@israilov</span><i>→</i>
+    </a>
   </div>
 </section>
 
 <footer>
-  <div class="footer-logo">ИР<span>10</span></div>
-  <p>© 2026 Исраилов Расул · Таджикистан 🇹🇯</p>
+  <div class="footer-top">
+    <div class="footer-logo">ИМ<span>.</span></div>
+    <p class="footer-line">Мечтал стать футболистом — стал. Начал заново — и не жалею.</p>
+  </div>
+  <p class="footer-bottom">© 2026 Исраилов Мухаммадрасул · Таджикистан 🇹🇯</p>
 </footer>
 
 <script src="script.js"></script>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="p1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A040B"/><stop offset="60%" stop-color="#5A1122"/>
+      <stop offset="100%" stop-color="#7A1028"/>
+    </linearGradient>
+    <radialGradient id="beam" cx="0.5" cy="0" r="0.9">
+      <stop offset="0%" stop-color="#F3D79A" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F3D79A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#p1)"/>
+  <g fill="#E9B64C" opacity="0.85">
+    <rect x="86" y="44" width="76" height="20" rx="4"/><rect x="118" y="64" width="8" height="70"/>
+    <rect x="438" y="44" width="76" height="20" rx="4"/><rect x="470" y="64" width="8" height="70"/>
+  </g>
+  <path d="M124 60 L20 450 L280 450 Z" fill="url(#beam)"/>
+  <path d="M474 60 L320 450 L580 450 Z" fill="url(#beam)"/>
+  <rect y="150" width="600" height="46" fill="#2B0710" opacity="0.85"/>
+  <g fill="#A61C3C" opacity="0.7">
+    <circle cx="40" cy="172" r="8"/><circle cx="76" cy="168" r="8"/><circle cx="114" cy="174" r="8"/>
+    <circle cx="156" cy="169" r="8"/><circle cx="198" cy="175" r="8"/><circle cx="240" cy="170" r="8"/>
+    <circle cx="282" cy="174" r="8"/><circle cx="324" cy="169" r="8"/><circle cx="366" cy="175" r="8"/>
+    <circle cx="408" cy="170" r="8"/><circle cx="450" cy="174" r="8"/><circle cx="492" cy="169" r="8"/>
+    <circle cx="534" cy="175" r="8"/><circle cx="574" cy="170" r="8"/>
+  </g>
+  <rect y="196" width="600" height="254" fill="#4D0E1D"/>
+  <g stroke="#F6EFE9" stroke-opacity="0.35" stroke-width="3" fill="none">
+    <rect x="30" y="230" width="540" height="200" rx="2"/>
+    <line x1="300" y1="230" x2="300" y2="430"/>
+    <circle cx="300" cy="330" r="58"/>
+    <rect x="30" y="286" width="72" height="88"/>
+    <rect x="498" y="286" width="72" height="88"/>
+  </g>
+  <g fill="#120309">
+    <circle cx="300" cy="292" r="17"/>
+    <path d="M286 314 L314 314 L322 372 L308 372 L300 340 L292 372 L278 372 Z"/>
+    <path d="M288 320 L262 350 L252 342 L278 310 Z"/>
+    <path d="M292 372 L282 420 L298 420 L308 376 Z"/>
+    <path d="M308 372 L322 420 L338 420 L322 376 Z"/>
+  </g>
+  <circle cx="250" cy="412" r="15" fill="#F6EFE9"/>
+</svg>
