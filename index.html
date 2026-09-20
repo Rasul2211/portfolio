@@ -3,405 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Исраилов Мухаммадрасул — портфолио</title>
-<meta name="description" content="Портфолио Исраилова Мухаммадрасула: путь от профессионального футбола к разработке. Команда из трёх друзей, одна общая цель.">
-<meta name="theme-color" content="#7A1028">
-<meta property="og:title" content="Исраилов Мухаммадрасул — портфолио">
-<meta property="og:description" content="Мечтал стать футболистом — стал. Здоровье подвело — начал заново. Теперь пишу код.">
+<title>Исраилов Мухаммадрасул — Full-Stack разработчик</title>
+<meta name="description" content="Исраилов Мухаммадрасул — Full-Stack разработчик из Душанбе. React, Python, 4 года опыта.">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:title" content="Исраилов Мухаммадрасул — Full-Stack разработчик">
+<meta property="og:description" content="Фронтенд на React, бэкенд на Python. Душанбе, Таджикистан.">
 <meta property="og:image" content="images/photo/rasul-studio.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Unbounded:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ═══ ПРЕЛОАДЕР ═══ -->
-<div class="preloader" id="preloader">
-  <div class="pre-inner">
-    <div class="pre-name">
-      <span>И</span><span>С</span><span>Р</span><span>А</span><span>И</span><span>Л</span><span>О</span><span>В</span>
-    </div>
-    <div class="pre-bar"><i id="preBar"></i></div>
-    <div class="pre-count"><span id="preCount">0</span>%</div>
-  </div>
-</div>
-
-<!-- ═══ ДЕКОР ═══ -->
-<div class="grain" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-<div class="glow-follow" id="glowFollow" aria-hidden="true"></div>
-
-<!-- ═══ НАВИГАЦИЯ ═══ -->
-<header class="navbar" id="navbar">
-  <a href="#hero" class="logo" data-magnet>ИМ<span>.</span></a>
+<header class="nav" id="nav">
+  <a href="#hero" class="nav-logo">ИМ<span>.</span></a>
   <nav class="nav-links" id="navLinks">
     <a href="#about">Обо мне</a>
-    <a href="#story">История</a>
     <a href="#skills">Навыки</a>
+    <a href="#projects">Проекты</a>
     <a href="#team">Команда</a>
-    <a href="#gallery">Фото</a>
-    <a href="#contact" class="nav-cta" data-magnet>Связаться</a>
+    <a href="#contact">Контакты</a>
   </nav>
-  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+    <span></span><span></span>
+  </button>
 </header>
 
-<!-- ═══ ГЛАВНЫЙ ЭКРАН ═══ -->
+<main>
+
+<!-- ─────────── HERO ─────────── -->
 <section class="hero" id="hero">
-  <div class="hero-aura"></div>
-  <div class="hero-grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-glow" aria-hidden="true"></div>
 
-  <div class="hero-inner">
-    <div class="hero-left">
-      <p class="hero-tag"><i class="dot"></i> Душанбе → код · 2026</p>
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="mono hero-place anim" style="--d:0s">Душанбе, Таджикистан</p>
 
-      <h1 class="hero-name">
-        <span class="hn-row" data-split>Исраилов</span>
-        <span class="hn-row"><span class="hn-slide accent">Мухаммадрасул</span></span>
+      <h1 class="hero-name anim" style="--d:.06s">
+        Исраилов<br><span class="accent">Мухаммадрасул</span>
       </h1>
 
-      <p class="hero-role">
-        <span class="role-static">Я</span>
-        <span class="role-rotator" id="roleRotator"><b>разработчик</b></span>
+      <p class="hero-role anim" style="--d:.12s">Full-Stack разработчик · 4 года</p>
+
+      <p class="hero-desc anim" style="--d:.18s">
+        Фронтенд на React, бэкенд на Python.<br>
+        До этого — профессиональный футбол.
       </p>
 
-      <p class="hero-desc">
-        В детстве я мечтал стать профессиональным футболистом — и стал им.
-        А потом, в самый нужный момент, меня подвело здоровье.
-        Сегодня я собираю то же самое чувство — из кода.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#story" class="btn btn-primary" data-magnet><span>Моя история</span></a>
-        <a href="#team" class="btn btn-ghost" data-magnet><span>Наша команда</span></a>
+      <div class="hero-actions anim" style="--d:.24s">
+        <a href="#projects" class="btn btn-solid">Проекты</a>
+        <a href="#contact" class="btn btn-line">Связаться</a>
       </div>
 
-      <div class="hero-quick">
-        <div><b data-target="12">0</b><span>лет в футболе</span></div>
-        <div><b data-target="3">0</b><span>человека в команде</span></div>
-        <div><b data-target="1">0</b><span>общая цель</span></div>
-      </div>
+      <ul class="mono hero-stack anim" style="--d:.3s">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        <li>React</li><li>Python</li><li>Git</li>
+      </ul>
     </div>
 
-    <div class="hero-right">
-      <div class="portrait-frame" data-tilt>
-        <div class="pf-ring"></div>
-        <div class="pf-ring pf-ring-2"></div>
-        <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" class="pf-img">
-        <div class="pf-badge"><b>2026</b><span>разработчик</span></div>
-        <div class="pf-tape">available for work</div>
-      </div>
+    <div class="hero-photo anim" style="--d:.16s">
+      <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="919">
     </div>
   </div>
-
-  <a href="#about" class="scroll-hint" aria-label="Листай вниз"><span></span><i>скролл</i></a>
 </section>
 
-<!-- ═══ БЕГУЩАЯ СТРОКА ═══ -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>ХАРАКТЕР</span><i>✦</i><span>КОД</span><i>✦</i><span>ФУТБОЛ</span><i>✦</i><span>КОМАНДА</span><i>✦</i>
-    <span>ДИСЦИПЛИНА</span><i>✦</i><span>ТАДЖИКИСТАН</span><i>✦</i>
-    <span>ХАРАКТЕР</span><i>✦</i><span>КОД</span><i>✦</i><span>ФУТБОЛ</span><i>✦</i><span>КОМАНДА</span><i>✦</i>
-    <span>ДИСЦИПЛИНА</span><i>✦</i><span>ТАДЖИКИСТАН</span><i>✦</i>
-  </div>
-</div>
+<!-- ─────────── ОБО МНЕ ─────────── -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="mono sec-num">01</span>
+      <h2 class="sec-title">Обо мне</h2>
+    </header>
 
-<!-- ═══ ОБО МНЕ ═══ -->
-<section class="about" id="about">
-  <div class="section-head reveal">
-    <span class="eyebrow">01 — Знакомство</span>
-    <h2 class="sec-title" data-split-words>Обо мне</h2>
-  </div>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <img src="images/photo/rasul-bench.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="1339" loading="lazy">
+      </div>
 
-  <div class="about-grid">
-    <div class="about-photo reveal" data-tilt>
-      <div class="ap-shape"></div>
-      <img src="images/photo/rasul-bench.jpg" alt="Исраилов Мухаммадрасул">
-      <div class="ap-caption"><b>Тогда</b><span>скамейка вместо поля</span></div>
-    </div>
+      <div class="about-text reveal">
+        <p class="lead">Четыре года пишу код. Начинал с вёрстки, сейчас делаю и фронтенд, и бэкенд.</p>
 
-    <div class="about-text reveal">
-      <p class="lead">Меня зовут Мухаммадрасул. Друзья зовут Расулом. Двенадцать лет
-      я жил футболом, а теперь учусь жить кодом — и, кажется, это одно и то же.</p>
+        <p>До этого был профессиональным футболистом. Здоровье подвело тогда, когда всё только начиналось — пришлось искать себя заново. Нашёл.</p>
 
-      <p>Мяч появился у меня раньше, чем первый портфель. Двор, два кирпича вместо ворот,
-      игра до темноты, пока мамы не начинали кричать из окон. Я был тем самым пацаном,
-      который оставался бить по стенке, когда все уже разошлись по домам.</p>
+        <p>Работаю не один: нас трое, и это мои друзья.</p>
 
-      <p>Я дошёл до профессионального уровня — контракт, сборы, форма с моей фамилией на спине.
-      А потом здоровье сказало «стоп» ровно в тот момент, когда всё только начиналось.
-      Не в межсезонье, не после карьеры. В самый нужный момент.</p>
-
-      <p>Полгода я не знал, кто я без мяча. А потом открыл ноутбук — и понял,
-      что дисциплина, выносливость и умение терпеть переносятся куда угодно.
-      В разработке всё то же самое: тренировка, разбор ошибок, команда рядом.</p>
-
-      <div class="facts">
-        <div class="fact"><span>Имя</span><b>Мухаммадрасул</b></div>
-        <div class="fact"><span>Сейчас</span><b>Разработчик</b></div>
-        <div class="fact"><span>Раньше</span><b>Нападающий</b></div>
-        <div class="fact"><span>Команда</span><b>3 человека</b></div>
-        <div class="fact"><span>Страна</span><b>Таджикистан</b></div>
-        <div class="fact"><span>Топливо</span><b>Упрямство</b></div>
+        <dl class="about-facts">
+          <div><dt class="mono">Опыт</dt><dd>4 года</dd></div>
+          <div><dt class="mono">Роль</dt><dd>Full-Stack</dd></div>
+          <div><dt class="mono">Город</dt><dd>Душанбе</dd></div>
+          <div><dt class="mono">Команда</dt><dd>3 человека</dd></div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ИСТОРИЯ ═══ -->
-<section class="story" id="story">
-  <div class="section-head reveal">
-    <span class="eyebrow">02 — Путь</span>
-    <h2 class="sec-title" data-split-words>Как это было</h2>
-    <p class="section-sub">Шесть глав: от двора до первого коммита.</p>
-  </div>
+<!-- ─────────── НАВЫКИ ─────────── -->
+<section class="section section-alt" id="skills">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="mono sec-num">02</span>
+      <h2 class="sec-title">Навыки</h2>
+    </header>
 
-  <div class="story-line" aria-hidden="true"><i id="storyLine"></i></div>
-
-  <article class="chapter reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-dream.svg" alt="Двор и первый мяч"><span class="chapter-num">01</span></div>
-    <div class="chapter-text">
-      <h3>Мяч дороже всего</h3>
-      <p>Мне было шесть, когда старший двоюродный брат вынес во двор мяч с ободранным боком.
-      После дождя он становился как камень, и бить по нему босиком было чистым безумием —
-      мы всё равно били.</p>
-      <p>Бутс не было. Первые два года я играл в кедах на размер больше и набивал
-      в носок газету, чтобы нога не болталась. Тогда я считал это нормой.
-      Сейчас понимаю: именно на этом разбитом асфальте я научился первому касанию —
-      там его просто нельзя было испортить.</p>
-      <blockquote>«Если ты обыграл человека на асфальте — на газоне тебе будет скучно.»</blockquote>
-    </div>
-  </article>
-
-  <article class="chapter reverse reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-pitch.svg" alt="Свет прожекторов"><span class="chapter-num">02</span></div>
-    <div class="chapter-text">
-      <h3>Мечта, которая сбылась</h3>
-      <p>В двенадцать меня не взяли в футбольную школу: «Слишком мелкий, приходи через год».
-      Я пришёл через год. Услышал «нет» снова. Пришёл и на третий раз — меня взяли,
-      кажется, просто из уважения к упрямству.</p>
-      <p>Дальше всё поехало быстро: дубль, сборы, первая форма с моей фамилией на спине.
-      Я помню не свой дебютный гол, а звук — как выдохнули трибуны. Детская мечта
-      официально стала моей профессией, и в тот вечер я честно думал, что больше
-      ничего доказывать не придётся.</p>
-      <blockquote>«Мне говорили „нет“ столько раз, что я перестал слышать это слово.»</blockquote>
-    </div>
-  </article>
-
-  <article class="chapter reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-break.svg" alt="Травма"><span class="chapter-num">03</span></div>
-    <div class="chapter-text">
-      <h3>Когда тело сказало «стоп»</h3>
-      <p>Здоровье подвело меня в самый нужный момент — не в межсезонье,
-      не в конце карьеры, а ровно тогда, когда открывалась главная дверь.
-      Сначала я думал, что это на месяц. Потом — что до конца сезона.
-      Потом врач посмотрел на снимки и надолго замолчал.</p>
-      <p>Самое тяжёлое было не в боли. Тяжело было приходить на базу просто посидеть на скамейке
-      и посмотреть, как бегут остальные. Я сидел в наушниках, смотрел на поле и не понимал,
-      кто я такой, если у меня забрать мяч.</p>
-      <blockquote>«Я потерял не игру. Я на полгода потерял ответ на вопрос „кто я“.»</blockquote>
-    </div>
-  </article>
-
-  <article class="chapter reverse reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-night.svg" alt="Ночь и ноутбук"><span class="chapter-num">04</span></div>
-    <div class="chapter-text">
-      <h3>Ноутбук вместо бутс</h3>
-      <p>Ноутбук мне достался старый, он грелся так, что зимой я держал на нём руки.
-      Первая программа вывела <code>Привет, мир</code> — и я, взрослый парень,
-      который забивал при трибунах, сидел и улыбался экрану, как дурак.</p>
-      <p>Первый месяц я почти ничего не понимал. Ошибка на ошибке, красный текст в консоли,
-      и никого, кто объяснит. Но у меня было преимущество, о котором я тогда не догадывался:
-      я двенадцать лет подряд делал одно и то же движение по тысяче раз в день.
-      Повторение меня не пугало. Повторение — это мой родной язык.</p>
-      <blockquote>«Баг — это защитник. Он просто стоит между мной и воротами.»</blockquote>
-    </div>
-  </article>
-
-  <article class="chapter reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-code.svg" alt="Первый проект"><span class="chapter-num">05</span></div>
-    <div class="chapter-text">
-      <h3>Первый настоящий проект</h3>
-      <p>Через год я дописал свой первый сайт от начала до конца. Ночь, 3:40,
-      всё наконец собралось — и я поймал ровно то же чувство, что и после гола.
-      Тот же холодок, та же тишина внутри. Тогда я окончательно понял, что не ушёл из спорта.
-      Я просто сменил поле.</p>
-      <p>Футбол научил меня вещам, которым не учат на курсах: проигрывать и приходить
-      на следующий день, слышать тренера, когда он орёт по делу, и доигрывать матч,
-      даже если счёт уже не в твою пользу. Дедлайн после этого — совсем не страшно.</p>
-      <blockquote>«Код — это тренировка, которую можно повторять бесконечно, не ломая колено.»</blockquote>
-    </div>
-  </article>
-
-  <article class="chapter reverse reveal">
-    <div class="chapter-img" data-tilt><img src="images/ill-team.svg" alt="Команда из трёх друзей"><span class="chapter-num">06</span></div>
-    <div class="chapter-text">
-      <h3>Нас трое</h3>
-      <p>Одному было тяжело — и я позвал друзей. Нас трое: мы знакомы задолго до кода,
-      и это оказалось важнее любого стека. Мы спорим до хрипоты, переписываем друг за другом,
-      но ни разу не разошлись по разным сторонам.</p>
-      <p>У нас одна общая цель — вырасти из троих друзей с ноутбуками в команду,
-      которая делает продукты, нужные людям у нас дома. Не «когда-нибудь уехать»,
-      а построить это здесь.</p>
-      <blockquote>«Один игрок выигрывает матч. Команда выигрывает сезон.»</blockquote>
-    </div>
-  </article>
-</section>
-
-<!-- ═══ НАВЫКИ ═══ -->
-<section class="skills" id="skills">
-  <div class="section-head reveal">
-    <span class="eyebrow">03 — Инструменты</span>
-    <h2 class="sec-title" data-split-words>Что я умею</h2>
-    <p class="section-sub">Стек растёт, но принцип тот же: тренировка каждый день.</p>
-  </div>
-
-  <div class="skills-wrap">
-    <div class="skill-bars reveal">
-      <div class="skill"><div class="skill-top"><span>HTML / CSS</span><b>92</b></div><div class="bar"><i data-val="92"></i></div></div>
-      <div class="skill"><div class="skill-top"><span>JavaScript</span><b>84</b></div><div class="bar"><i data-val="84"></i></div></div>
-      <div class="skill"><div class="skill-top"><span>Python</span><b>78</b></div><div class="bar"><i data-val="78"></i></div></div>
-      <div class="skill"><div class="skill-top"><span>Git / GitHub</span><b>80</b></div><div class="bar"><i data-val="80"></i></div></div>
-      <div class="skill"><div class="skill-top"><span>Работа в команде</span><b>97</b></div><div class="bar"><i data-val="97"></i></div></div>
-      <div class="skill"><div class="skill-top"><span>Характер</span><b>99</b></div><div class="bar"><i data-val="99"></i></div></div>
-    </div>
-
-    <div class="skill-cards">
-      <div class="scard reveal"><span class="sc-ico">⚡</span><h4>Фронтенд</h4><p>Вёрстка, адаптив, анимации и интерфейсы, которые приятно трогать.</p></div>
-      <div class="scard reveal"><span class="sc-ico">🧠</span><h4>Логика</h4><p>Python и алгоритмы: разбираю задачу так же, как разбирал соперника.</p></div>
-      <div class="scard reveal"><span class="sc-ico">🤝</span><h4>Командность</h4><p>Двенадцать лет в раздевалке. Спорить по делу и держать пас — умею.</p></div>
-      <div class="scard reveal"><span class="sc-ico">🔥</span><h4>Дисциплина</h4><p>Пять тренировок в неделю двенадцать лет подряд. Дедлайн не страшен.</p></div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <h3 class="mono skill-label">Frontend</h3>
+        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="mono skill-label">Backend</h3>
+        <ul><li>Python</li></ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3 class="mono skill-label">Инструменты</h3>
+        <ul><li>Git</li><li>GitHub</li></ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ КОМАНДА ═══ -->
-<section class="team" id="team">
-  <div class="section-head reveal">
-    <span class="eyebrow">04 — Мы</span>
-    <h2 class="sec-title" data-split-words>Команда</h2>
-    <p class="section-sub">Три человека, одна цель. Сначала друзья — потом уже разработчики.</p>
-  </div>
+<!-- ─────────── ПРОЕКТЫ ─────────── -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="mono sec-num">03</span>
+      <h2 class="sec-title">Проекты</h2>
+      <p class="sec-sub">Раздел готов, тексты — заглушки. Заменим на реальные работы.</p>
+    </header>
 
-  <div class="team-grid">
-    <article class="tcard reveal" data-tilt>
-      <div class="tc-num">01</div>
-      <div class="tc-avatar"><img src="images/photo/rasul-studio.jpg" alt="Мухаммадрасул"></div>
-      <h4>Мухаммадрасул</h4>
-      <p class="tc-role">Фронтенд · капитан</p>
-      <p class="tc-text">Собираю интерфейсы и держу темп команды. Бывший нападающий — привычка бежать вперёд осталась.</p>
-      <div class="tc-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-    </article>
+    <div class="projects-grid">
+      <article class="project reveal">
+        <span class="mono project-num">01</span>
+        <span class="mono project-flag">заглушка</span>
+        <h3>Название проекта</h3>
+        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
+        <ul class="mono project-tags"><li>React</li><li>Python</li></ul>
+        <span class="project-link">Ссылка появится позже</span>
+      </article>
 
-    <article class="tcard reveal" data-tilt>
-      <div class="tc-num">02</div>
-      <div class="tc-avatar tc-initial"><b>A</b></div>
-      <h4>Друг №2</h4>
-      <p class="tc-role">Бэкенд · мозг</p>
-      <p class="tc-text">Тот, кто задаёт неудобные вопросы на старте и спасает проект за день до дедлайна.</p>
-      <div class="tc-tags"><span>Python</span><span>API</span><span>БД</span></div>
-    </article>
+      <article class="project reveal">
+        <span class="mono project-num">02</span>
+        <span class="mono project-flag">заглушка</span>
+        <h3>Название проекта</h3>
+        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
+        <ul class="mono project-tags"><li>JavaScript</li><li>CSS</li></ul>
+        <span class="project-link">Ссылка появится позже</span>
+      </article>
 
-    <article class="tcard reveal" data-tilt>
-      <div class="tc-num">03</div>
-      <div class="tc-avatar tc-initial"><b>S</b></div>
-      <h4>Друг №3</h4>
-      <p class="tc-role">Дизайн · глаз</p>
-      <p class="tc-text">Видит криво выровненный пиксель раньше, чем мы успеваем открыть файл.</p>
-      <div class="tc-tags"><span>UI</span><span>Figma</span><span>Бренд</span></div>
-    </article>
-  </div>
-
-  <div class="team-goal reveal">
-    <span class="tg-label">Наша общая цель</span>
-    <p>Вырасти из трёх друзей с ноутбуками в студию, которая делает продукты
-    для людей у нас дома — и доказать, что для этого не обязательно уезжать.</p>
+      <article class="project reveal">
+        <span class="mono project-num">03</span>
+        <span class="mono project-flag">заглушка</span>
+        <h3>Название проекта</h3>
+        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
+        <ul class="mono project-tags"><li>Python</li><li>Git</li></ul>
+        <span class="project-link">Ссылка появится позже</span>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ═══ ПРИНЦИПЫ ═══ -->
-<section class="values">
-  <div class="section-head reveal">
-    <span class="eyebrow">05 — Принципы</span>
-    <h2 class="sec-title" data-split-words>Во что я верю</h2>
-  </div>
-  <div class="values-grid">
-    <div class="vcard reveal"><b>01</b><h4>Повторение решает</h4><p>Талант — это старт. Дальше выигрывает тот, кто повторяет дольше всех.</p></div>
-    <div class="vcard reveal"><b>02</b><h4>План «Б» — не предательство</h4><p>Я не бросил мечту. Я перенёс её на другое поле.</p></div>
-    <div class="vcard reveal"><b>03</b><h4>Команда важнее звезды</h4><p>Сольный гол красивый. Но чемпионство берут вместе.</p></div>
-    <div class="vcard reveal"><b>04</b><h4>Проигрыш — это данные</h4><p>Разбор ошибок после матча дал мне больше, чем все победы.</p></div>
+<!-- ─────────── КОМАНДА ─────────── -->
+<section class="section section-alt" id="team">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="mono sec-num">04</span>
+      <h2 class="sec-title">Команда</h2>
+      <p class="sec-sub">Нас трое. Сначала друзья, потом уже разработчики.</p>
+    </header>
+
+    <div class="team-grid">
+      <article class="member reveal">
+        <div class="member-photo">
+          <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="919" loading="lazy">
+        </div>
+        <h3>Мухаммадрасул</h3>
+        <p class="mono member-role">Full-Stack</p>
+      </article>
+
+      <article class="member reveal">
+        <div class="member-photo member-empty"><span>—</span></div>
+        <h3>Имя друга</h3>
+        <p class="mono member-role">заглушка</p>
+      </article>
+
+      <article class="member reveal">
+        <div class="member-photo member-empty"><span>—</span></div>
+        <h3>Имя друга</h3>
+        <p class="mono member-role">заглушка</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ═══ ГАЛЕРЕЯ ═══ -->
-<section class="gallery" id="gallery">
-  <div class="section-head reveal">
-    <span class="eyebrow">06 — Моменты</span>
-    <h2 class="sec-title" data-split-words>Кадры</h2>
-  </div>
+<!-- ─────────── КОНТАКТЫ ─────────── -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="mono sec-num">05</span>
+      <h2 class="sec-title">Контакты</h2>
+      <p class="sec-sub">Открыт к работе и совместным проектам.</p>
+    </header>
 
-  <div class="gallery-grid">
-    <figure class="gitem wide reveal">
-      <img src="images/photo/rasul-bench.jpg" alt="Расул на скамейке">
-      <figcaption><b>Пауза</b><span>Скамейка, на которой я много думал</span></figcaption>
-    </figure>
-    <figure class="gitem reveal">
-      <img src="images/photo/rasul-studio.jpg" alt="Студийный портрет">
-      <figcaption><b>Сегодня</b><span>Новый образ, тот же характер</span></figcaption>
-    </figure>
-    <figure class="gitem reveal">
-      <img src="images/photo/rasul-cafe.jpg" alt="Работа за телефоном">
-      <figcaption><b>Между делом</b><span>Код не отпускает даже за столом</span></figcaption>
-    </figure>
-    <figure class="gitem wide reveal">
-      <img src="images/photo/rasul-evening.jpg" alt="Вечер">
-      <figcaption><b>Вечер</b><span>Лучшие идеи приходят после заката</span></figcaption>
-    </figure>
+    <ul class="contacts">
+      <li class="reveal">
+        <a href="mailto:irasik2211@gmail.com">
+          <span class="mono contact-label">Email</span>
+          <span class="contact-value">irasik2211@gmail.com</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+      <li class="reveal">
+        <a href="https://github.com/Rasul2211" target="_blank" rel="noopener">
+          <span class="mono contact-label">GitHub</span>
+          <span class="contact-value">@Rasul2211</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- ═══ ЦИТАТА ═══ -->
-<section class="bigquote">
-  <div class="bq-inner reveal">
-    <span class="bq-mark">“</span>
-    <p>Футбол забрал у меня колено, но оставил характер.<br>С характером можно начать что угодно заново.</p>
-    <span class="bq-author">— Мухаммадрасул Исраилов</span>
-  </div>
-</section>
+</main>
 
-<!-- ═══ КОНТАКТЫ ═══ -->
-<section class="contact" id="contact">
-  <div class="section-head reveal">
-    <span class="eyebrow">07 — Связь</span>
-    <h2 class="sec-title" data-split-words>Напишите мне</h2>
-    <p class="section-sub">Проекты, совместная работа, стажировка или просто поговорить о футболе.</p>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="footer-name">Исраилов Мухаммадрасул</span>
+    <span class="mono footer-meta">Душанбе · 2026</span>
   </div>
-
-  <div class="contact-links">
-    <a href="mailto:irasik2211@gmail.com" class="clink reveal" data-magnet>
-      <b>Email</b><span>irasik2211@gmail.com</span><i>→</i>
-    </a>
-    <a href="https://github.com/Rasul2211" target="_blank" rel="noopener" class="clink reveal" data-magnet>
-      <b>GitHub</b><span>@Rasul2211</span><i>→</i>
-    </a>
-    <a href="https://t.me/" target="_blank" rel="noopener" class="clink reveal" data-magnet>
-      <b>Telegram</b><span>напишите в личные</span><i>→</i>
-    </a>
-    <a href="https://instagram.com/" target="_blank" rel="noopener" class="clink reveal" data-magnet>
-      <b>Instagram</b><span>@israilov</span><i>→</i>
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-top">
-    <div class="footer-logo">ИМ<span>.</span></div>
-    <p class="footer-line">Мечтал стать футболистом — стал. Начал заново — и не жалею.</p>
-  </div>
-  <p class="footer-bottom">© 2026 Исраилов Мухаммадрасул · Таджикистан 🇹🇯</p>
 </footer>
 
 <script src="script.js"></script>
