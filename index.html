@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Исраилов Мухаммадрасул — Full-Stack разработчик</title>
 <meta name="description" content="Исраилов Мухаммадрасул — Full-Stack разработчик из Душанбе. React, Python, 4 года опыта.">
-<meta name="theme-color" content="#0B0B0C">
+<meta name="theme-color" content="#120A0E">
 <meta property="og:title" content="Исраилов Мухаммадрасул — Full-Stack разработчик">
 <meta property="og:description" content="Фронтенд на React, бэкенд на Python. Душанбе, Таджикистан.">
 <meta property="og:image" content="images/logo.png">
@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,11 +21,12 @@
 <header class="nav" id="nav">
   <a href="#hero" class="nav-logo">ИМ<span>.</span></a>
   <nav class="nav-links" id="navLinks">
+    <a href="#projects">Проекты</a>
+    <a href="#cases">Кейсы</a>
     <a href="#about">Обо мне</a>
     <a href="#skills">Навыки</a>
-    <a href="#projects">Проекты</a>
     <a href="#team">Команда</a>
-    <a href="#contact">Контакты</a>
+    <a href="#contact" class="nav-cta">Связаться</a>
   </nav>
   <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
     <span></span><span></span>
@@ -34,91 +35,196 @@
 
 <main>
 
-<!-- ─────────── HERO ─────────── -->
+<!-- ══════════ ТЁМНЫЙ ПЕРВЫЙ ЭКРАН ══════════ -->
 <section class="hero" id="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-bg" aria-hidden="true">
+    <span class="hero-orb hero-orb-1"></span>
+    <span class="hero-orb hero-orb-2"></span>
+    <span class="hero-rule"></span>
+  </div>
 
   <div class="wrap hero-inner">
     <div class="hero-text">
-      <p class="mono hero-place anim" style="--d:0s">Душанбе, Таджикистан</p>
+      <p class="mono hero-place anim" style="--d:.05s"><i></i> Душанбе, Таджикистан</p>
 
-      <h1 class="hero-name anim" style="--d:.06s">
-        Исраилов<br><span class="accent">Мухаммадрасул</span>
+      <h1 class="hero-name anim" style="--d:.12s">
+        Исраилов<br><span class="grad">Мухаммадрасул</span>
       </h1>
 
-      <p class="hero-role anim" style="--d:.12s">Full-Stack разработчик · 4 года</p>
+      <p class="hero-role anim" style="--d:.2s">Full-Stack разработчик · 4 года</p>
 
-      <p class="hero-desc anim" style="--d:.18s">
+      <p class="hero-desc anim" style="--d:.27s">
         Фронтенд на React, бэкенд на Python.<br>
         До этого — профессиональный футбол.
       </p>
 
-      <div class="hero-actions anim" style="--d:.24s">
-        <a href="#projects" class="btn btn-solid">Проекты</a>
-        <a href="#contact" class="btn btn-line">Связаться</a>
+      <div class="hero-actions anim" style="--d:.34s">
+        <a href="#projects" class="btn btn-gold">Смотреть работы</a>
+        <a href="#contact" class="btn btn-outline">Связаться</a>
       </div>
 
-      <ul class="mono hero-stack anim" style="--d:.3s">
+      <ul class="mono hero-stack anim" style="--d:.41s">
         <li>HTML</li><li>CSS</li><li>JavaScript</li>
         <li>React</li><li>Python</li><li>Git</li>
       </ul>
     </div>
 
-    <div class="hero-photo anim" style="--d:.16s">
+    <div class="hero-photo anim" style="--d:.22s" data-tilt data-depth>
+      <span class="hero-frame" aria-hidden="true"></span>
       <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="919">
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <span class="mono">листайте вниз</span>
+    <span class="hero-line" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- ══════════ ПРОЕКТЫ ══════════ -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="mono sec-num reveal">01</span>
+      <h2 class="sec-title reveal">Проекты</h2>
+      <p class="sec-sub reveal">Что собрано за последнее время.</p>
+      <p class="demo-note reveal">Раздел-образец. Тексты и ссылки заменим на реальные работы.</p>
+    </header>
+
+    <div class="projects-grid">
+      <article class="project reveal" data-tilt data-depth>
+        <div class="project-top">
+          <span class="mono project-num">01</span>
+          <span class="mono badge">образец</span>
+        </div>
+        <h3>Сайт-каталог</h3>
+        <p>Витрина товаров с фильтрами, корзиной и админкой для правок без разработчика.</p>
+        <ul class="mono tags"><li>React</li><li>Python</li><li>PostgreSQL</li></ul>
+        <span class="project-go">Подробнее <i>→</i></span>
+      </article>
+
+      <article class="project reveal" data-tilt data-depth>
+        <div class="project-top">
+          <span class="mono project-num">02</span>
+          <span class="mono badge">образец</span>
+        </div>
+        <h3>Личный кабинет</h3>
+        <p>Авторизация, роли, история заказов и выгрузка отчётов в таблицу.</p>
+        <ul class="mono tags"><li>React</li><li>API</li><li>JWT</li></ul>
+        <span class="project-go">Подробнее <i>→</i></span>
+      </article>
+
+      <article class="project reveal" data-tilt data-depth>
+        <div class="project-top">
+          <span class="mono project-num">03</span>
+          <span class="mono badge">образец</span>
+        </div>
+        <h3>Лендинг с заявками</h3>
+        <p>Одностраничник с формой, которая отправляет заявки прямо в мессенджер.</p>
+        <ul class="mono tags"><li>JavaScript</li><li>CSS</li><li>Telegram Bot</li></ul>
+        <span class="project-go">Подробнее <i>→</i></span>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ─────────── ОБО МНЕ ─────────── -->
+<!-- ══════════ КЕЙСЫ ══════════ -->
+<section class="section section-paper" id="cases">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="mono sec-num reveal">02</span>
+      <h2 class="sec-title reveal">Кейсы</h2>
+      <p class="sec-sub reveal">Как устроена работа: задача, решение, результат.</p>
+      <p class="demo-note reveal">Раздел-образец. Структура готова — впишем ваши настоящие кейсы.</p>
+    </header>
+
+    <div class="cases">
+      <article class="case reveal" data-tilt data-depth>
+        <span class="mono badge badge-float">образец</span>
+        <span class="mono case-field">Строительство</span>
+        <h3>Сайт для строительной компании</h3>
+        <div class="case-rows">
+          <div><span class="mono">Задача</span><p>Заявки терялись в переписке, объекты показывали фотографиями в мессенджере.</p></div>
+          <div><span class="mono">Решение</span><p>Каталог объектов с фильтром по типу и срокам, форма заявки, админка для прораба.</p></div>
+          <div><span class="mono">Результат</span><p>Все обращения собираются в одном месте, объекты обновляются без разработчика.</p></div>
+        </div>
+        <ul class="mono tags"><li>React</li><li>Python</li><li>Админка</li></ul>
+      </article>
+
+      <article class="case reveal" data-tilt data-depth>
+        <span class="mono badge badge-float">образец</span>
+        <span class="mono case-field">Услуги</span>
+        <h3>Онлайн-запись для сервиса</h3>
+        <div class="case-rows">
+          <div><span class="mono">Задача</span><p>Запись вели в тетради, клиенты приходили в занятое время.</p></div>
+          <div><span class="mono">Решение</span><p>Календарь со свободными слотами, напоминания в мессенджер, панель мастера.</p></div>
+          <div><span class="mono">Результат</span><p>Накладки исчезли, клиент записывается сам и получает подтверждение.</p></div>
+        </div>
+        <ul class="mono tags"><li>React</li><li>API</li><li>Уведомления</li></ul>
+      </article>
+
+      <article class="case reveal" data-tilt data-depth>
+        <span class="mono badge badge-float">образец</span>
+        <span class="mono case-field">Торговля</span>
+        <h3>Учёт товаров для магазина</h3>
+        <div class="case-rows">
+          <div><span class="mono">Задача</span><p>Остатки считали в таблице, данные расходились между точками.</p></div>
+          <div><span class="mono">Решение</span><p>Общая база остатков, приход и списание, отчёт по продажам за период.</p></div>
+          <div><span class="mono">Результат</span><p>Остатки едины для всех точек, отчёт собирается за пару секунд.</p></div>
+        </div>
+        <ul class="mono tags"><li>Python</li><li>База данных</li><li>Отчёты</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ОБО МНЕ ══════════ -->
 <section class="section" id="about">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <span class="mono sec-num">01</span>
-      <h2 class="sec-title">Обо мне</h2>
+    <header class="sec-head">
+      <span class="mono sec-num reveal">03</span>
+      <h2 class="sec-title reveal">Обо мне</h2>
     </header>
 
     <div class="about-grid">
-      <div class="about-photo reveal">
+      <div class="about-photo reveal reveal-left" data-tilt data-depth>
         <img src="images/photo/rasul-bench.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="1339" loading="lazy">
       </div>
 
-      <div class="about-text reveal">
+      <div class="about-text reveal reveal-right">
         <p class="lead">Четыре года пишу код. Начинал с вёрстки, сейчас делаю и фронтенд, и бэкенд.</p>
-
         <p>До этого был профессиональным футболистом. Здоровье подвело тогда, когда всё только начиналось — пришлось искать себя заново. Нашёл.</p>
-
         <p>Работаю не один: нас трое, и это мои друзья.</p>
 
         <dl class="about-facts">
-          <div><dt class="mono">Опыт</dt><dd>4 года</dd></div>
+          <div><dt class="mono">Опыт</dt><dd><b class="count" data-to="4">0</b> года</dd></div>
           <div><dt class="mono">Роль</dt><dd>Full-Stack</dd></div>
           <div><dt class="mono">Город</dt><dd>Душанбе</dd></div>
-          <div><dt class="mono">Команда</dt><dd>3 человека</dd></div>
+          <div><dt class="mono">Команда</dt><dd><b class="count" data-to="3">0</b> человека</dd></div>
         </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─────────── НАВЫКИ ─────────── -->
-<section class="section section-alt" id="skills">
+<!-- ══════════ НАВЫКИ ══════════ -->
+<section class="section section-paper" id="skills">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <span class="mono sec-num">02</span>
-      <h2 class="sec-title">Навыки</h2>
+    <header class="sec-head">
+      <span class="mono sec-num reveal">04</span>
+      <h2 class="sec-title reveal">Навыки</h2>
     </header>
 
     <div class="skills-grid">
-      <div class="skill-group reveal">
+      <div class="skill-group reveal" data-tilt data-depth>
         <h3 class="mono skill-label">Frontend</h3>
         <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
       </div>
-      <div class="skill-group reveal">
+      <div class="skill-group reveal" data-tilt data-depth>
         <h3 class="mono skill-label">Backend</h3>
         <ul><li>Python</li></ul>
       </div>
-      <div class="skill-group reveal">
+      <div class="skill-group reveal" data-tilt data-depth>
         <h3 class="mono skill-label">Инструменты</h3>
         <ul><li>Git</li><li>GitHub</li></ul>
       </div>
@@ -126,57 +232,17 @@
   </div>
 </section>
 
-<!-- ─────────── ПРОЕКТЫ ─────────── -->
-<section class="section" id="projects">
+<!-- ══════════ КОМАНДА ══════════ -->
+<section class="section" id="team">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <span class="mono sec-num">03</span>
-      <h2 class="sec-title">Проекты</h2>
-      <p class="sec-sub">Раздел готов, тексты — заглушки. Заменим на реальные работы.</p>
-    </header>
-
-    <div class="projects-grid">
-      <article class="project reveal">
-        <span class="mono project-num">01</span>
-        <span class="mono project-flag">заглушка</span>
-        <h3>Название проекта</h3>
-        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
-        <ul class="mono project-tags"><li>React</li><li>Python</li></ul>
-        <span class="project-link">Ссылка появится позже</span>
-      </article>
-
-      <article class="project reveal">
-        <span class="mono project-num">02</span>
-        <span class="mono project-flag">заглушка</span>
-        <h3>Название проекта</h3>
-        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
-        <ul class="mono project-tags"><li>JavaScript</li><li>CSS</li></ul>
-        <span class="project-link">Ссылка появится позже</span>
-      </article>
-
-      <article class="project reveal">
-        <span class="mono project-num">03</span>
-        <span class="mono project-flag">заглушка</span>
-        <h3>Название проекта</h3>
-        <p>Короткое описание: что это за проект, для кого и что именно сделали вы.</p>
-        <ul class="mono project-tags"><li>Python</li><li>Git</li></ul>
-        <span class="project-link">Ссылка появится позже</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ─────────── КОМАНДА ─────────── -->
-<section class="section section-alt" id="team">
-  <div class="wrap">
-    <header class="sec-head reveal">
-      <span class="mono sec-num">04</span>
-      <h2 class="sec-title">Команда</h2>
-      <p class="sec-sub">Нас трое. Сначала друзья, потом уже разработчики.</p>
+    <header class="sec-head">
+      <span class="mono sec-num reveal">05</span>
+      <h2 class="sec-title reveal">Команда</h2>
+      <p class="sec-sub reveal">Нас трое. Сначала друзья, потом уже разработчики.</p>
     </header>
 
     <div class="team-grid">
-      <article class="member reveal">
+      <article class="member reveal" data-tilt data-depth>
         <div class="member-photo">
           <img src="images/photo/rasul-studio.jpg" alt="Исраилов Мухаммадрасул" width="1000" height="919" loading="lazy">
         </div>
@@ -184,28 +250,83 @@
         <p class="mono member-role">Full-Stack</p>
       </article>
 
-      <article class="member reveal">
+      <article class="member reveal" data-tilt data-depth>
         <div class="member-photo member-empty"><span>—</span></div>
         <h3>Имя друга</h3>
-        <p class="mono member-role">заглушка</p>
+        <p class="mono member-role">образец</p>
       </article>
 
-      <article class="member reveal">
+      <article class="member reveal" data-tilt data-depth>
         <div class="member-photo member-empty"><span>—</span></div>
         <h3>Имя друга</h3>
-        <p class="mono member-role">заглушка</p>
+        <p class="mono member-role">образец</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ─────────── КОНТАКТЫ ─────────── -->
+<!-- ══════════ ОТЗЫВЫ ══════════ -->
+<section class="section section-paper" id="reviews">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="mono sec-num reveal">06</span>
+      <h2 class="sec-title reveal">Отзывы</h2>
+      <p class="demo-note reveal">Раздел-образец. Здесь встанут настоящие отзывы ваших заказчиков — имена и тексты подставим, когда они появятся.</p>
+    </header>
+
+    <div class="reviews-grid">
+      <figure class="review reveal" data-tilt data-depth>
+        <span class="mono badge">образец</span>
+        <blockquote>Место для отзыва: что заказывали, как шла работа, что получили в итоге.</blockquote>
+        <figcaption><b>Имя Фамилия</b><span class="mono">Должность, компания</span></figcaption>
+      </figure>
+
+      <figure class="review reveal" data-tilt data-depth>
+        <span class="mono badge">образец</span>
+        <blockquote>Место для отзыва: что заказывали, как шла работа, что получили в итоге.</blockquote>
+        <figcaption><b>Имя Фамилия</b><span class="mono">Должность, компания</span></figcaption>
+      </figure>
+
+      <figure class="review reveal" data-tilt data-depth>
+        <span class="mono badge">образец</span>
+        <blockquote>Место для отзыва: что заказывали, как шла работа, что получили в итоге.</blockquote>
+        <figcaption><b>Имя Фамилия</b><span class="mono">Должность, компания</span></figcaption>
+      </figure>
+
+      <figure class="review reveal" data-tilt data-depth>
+        <span class="mono badge">образец</span>
+        <blockquote>Место для отзыва: что заказывали, как шла работа, что получили в итоге.</blockquote>
+        <figcaption><b>Имя Фамилия</b><span class="mono">Должность, компания</span></figcaption>
+      </figure>
+
+      <figure class="review reveal" data-tilt data-depth>
+        <span class="mono badge">образец</span>
+        <blockquote>Место для отзыва: что заказывали, как шла работа, что получили в итоге.</blockquote>
+        <figcaption><b>Имя Фамилия</b><span class="mono">Должность, компания</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ПРИЗЫВ ══════════ -->
+<section class="cta" id="cta">
+  <div class="wrap cta-inner reveal">
+    <p class="mono cta-eyebrow">Свяжитесь с нами</p>
+    <p class="cta-text">
+      Хотите, чтобы ваш бизнес <span class="cta-accent">рос</span> —<br>
+      напишите нам.
+    </p>
+    <a href="#contact" class="btn btn-gold btn-lg">Обсудить задачу</a>
+  </div>
+</section>
+
+<!-- ══════════ КОНТАКТЫ ══════════ -->
 <section class="section" id="contact">
   <div class="wrap">
-    <header class="sec-head reveal">
-      <span class="mono sec-num">05</span>
-      <h2 class="sec-title">Контакты</h2>
-      <p class="sec-sub">Открыт к работе и совместным проектам.</p>
+    <header class="sec-head">
+      <span class="mono sec-num reveal">07</span>
+      <h2 class="sec-title reveal">Контакты</h2>
+      <p class="sec-sub reveal">Открыт к работе и совместным проектам.</p>
     </header>
 
     <ul class="contacts">
