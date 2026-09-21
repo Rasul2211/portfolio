@@ -63,16 +63,33 @@ if (reduced) {
       });
     });
 
+  const pending = new Set(revealItems);
+
+  function show(el) {
+    el.classList.add('in');
+    pending.delete(el);
+    io.unobserve(el);
+    el.querySelectorAll('.count').forEach(runCount);
+  }
+
   const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('in');
-      io.unobserve(entry.target);
-      entry.target.querySelectorAll('.count').forEach(runCount);
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) show(entry.target); });
   }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
 
   revealItems.forEach(el => io.observe(el));
+
+  // Страховка: наблюдатель молчит о блоках, через которые прыгнули — при
+  // переходе по якорю, восстановлении позиции или резком скролле. Всё, что
+  // уже выше нижней границы экрана, показываем принудительно.
+  function sweep() {
+    if (!pending.size) return;
+    for (const el of [...pending]) {
+      if (el.getBoundingClientRect().top < innerHeight) show(el);
+    }
+  }
+  addEventListener('scroll', sweep, { passive: true });
+  addEventListener('load', sweep);
+  sweep();
 }
 
 /* ─── Счётчики ─── */
