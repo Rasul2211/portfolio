@@ -56,7 +56,7 @@ if (reduced) {
   revealItems.forEach(el => el.classList.add('in'));
 } else {
   // лёгкая «лесенка» для соседей в одной сетке
-  document.querySelectorAll('.projects-grid, .cases, .team-grid, .skills-grid, .contacts, .sec-head')
+  document.querySelectorAll('.projects-grid, .cases, .team-grid, .skills-grid, .reviews-grid, .contacts, .sec-head')
     .forEach(group => {
       [...group.children].forEach((child, i) => {
         child.style.transitionDelay = `${Math.min(i, 5) * 0.08}s`;
