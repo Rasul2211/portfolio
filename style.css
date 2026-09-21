@@ -201,18 +201,6 @@ ul,ol{list-style:none}
 .sec-num{display:block;color:var(--gold);margin-bottom:10px}
 .sec-title{font-family:var(--font-h);font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.02em}
 .sec-sub{color:var(--muted);margin-top:10px;max-width:54ch}
-.demo-note{
-  margin-top:14px;max-width:60ch;font-size:.82rem;color:var(--muted);
-  border-left:2px solid var(--gold);padding-left:12px;
-}
-
-.badge{
-  display:inline-block;width:fit-content;align-self:flex-start;
-  font-size:.62rem;color:var(--gold);
-  border:1px solid rgba(185,138,37,.4);border-radius:4px;padding:2px 8px;
-}
-.badge-float{position:absolute;top:22px;right:22px}
-
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags li{
   font-family:var(--font-m);font-size:.66rem;letter-spacing:.06em;
@@ -235,10 +223,7 @@ ul,ol{list-style:none}
 .project-num{color:var(--wine)}
 .project h3{font-family:var(--font-h);font-weight:600;font-size:1.14rem;margin-bottom:10px}
 .project p{color:var(--muted);font-size:.93rem;margin-bottom:18px}
-.project .tags{margin-bottom:18px}
-.project-go{font-size:.86rem;font-weight:600;color:var(--wine);display:inline-flex;align-items:center;gap:7px}
-.project-go i{font-style:normal;transition:transform .3s var(--ease)}
-.project:hover .project-go i{transform:translateX(5px)}
+.project .tags{margin-bottom:0}
 
 /* ─────────── Кейсы ─────────── */
 .cases{display:grid;gap:18px;perspective:1200px}
@@ -283,18 +268,8 @@ ul,ol{list-style:none}
 .member-empty{display:grid;place-items:center;background:var(--paper-2)}
 .member-empty span{color:var(--dim)}
 .member h3{font-family:var(--font-h);font-weight:600;font-size:1rem;margin-bottom:3px}
-
-/* ─────────── Отзывы ─────────── */
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;perspective:1000px}
-.review{
-  position:relative;padding:26px 24px;
-  background:var(--paper);border:1px solid var(--line);border-radius:12px;
-  display:flex;flex-direction:column;gap:16px;
-}
-.review blockquote{color:var(--muted);font-size:.94rem;line-height:1.65;flex:1}
-.review blockquote::before{content:'“';font-family:var(--font-h);font-size:2.4rem;color:var(--gold);opacity:.4;display:block;line-height:.7;margin-bottom:6px}
-.review figcaption{display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid var(--line-soft)}
-.review figcaption b{font-family:var(--font-h);font-weight:600;font-size:.94rem}
+.member-role{margin-bottom:10px}
+.member-text{color:var(--muted);font-size:.88rem;line-height:1.6}
 
 /* ─────────── Призыв ─────────── */
 .cta{
