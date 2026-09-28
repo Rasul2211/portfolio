@@ -1,0 +1,171 @@
+/* ═══ Первый экран: тёмный, с последовательным появлением ═══ */
+
+.hero{
+  position:relative;z-index:2;
+  min-height:100svh;
+  display:flex;align-items:center;
+  padding-block:calc(var(--nav-h) + 48px) 96px;
+  background:var(--ink);
+  color:#F6F1EE;
+  overflow:hidden;
+}
+
+/* ─── Фон: два мягких пятна и вертикали ─── */
+.hero-bg{position:absolute;inset:0;pointer-events:none;opacity:0;animation:bgIn .9s var(--e-out) forwards}
+@keyframes bgIn{to{opacity:1}}
+
+.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(8px)}
+.hero-bg .orb-1{
+  top:-18%;left:-12%;width:min(64vw,680px);aspect-ratio:1;
+  background:radial-gradient(circle,rgba(142,29,58,.5),transparent 66%);
+}
+.hero-bg .orb-2{
+  right:-16%;bottom:-22%;width:min(46vw,500px);aspect-ratio:1;
+  background:radial-gradient(circle,rgba(224,185,95,.16),transparent 68%);
+}
+.hero-bg .rules{
+  position:absolute;inset:0;
+  max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.hero-bg .rules i{border-left:1px solid rgba(255,255,255,.045)}
+.hero-bg .rules i:last-child{border-right:1px solid rgba(255,255,255,.045)}
+.hero-edge{
+  position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(224,185,95,.4),transparent);
+}
+
+/* ─── Последовательность появления ─── */
+.seq{opacity:0;animation:seqIn .7s var(--e-out) forwards;animation-delay:var(--i,0s)}
+@keyframes seqIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* строка имени выезжает из-под маски */
+.mask{display:block;overflow:hidden}
+.mask > span{
+  display:block;
+  transform:translateY(105%);
+  animation:maskUp .9s var(--e-out) forwards;
+  animation-delay:var(--i,0s);
+}
+@keyframes maskUp{to{transform:translateY(0)}}
+
+/* ─── Верхняя техническая строка ─── */
+.hero-top{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;flex-wrap:wrap;
+  padding-bottom:26px;margin-bottom:38px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  color:rgba(246,241,238,.55);
+}
+.hero-status{display:inline-flex;align-items:center;gap:9px}
+.hero-status .pip{
+  width:6px;height:6px;border-radius:50%;background:var(--gold-lt);
+  animation:pip 2.6s var(--e-soft) infinite;
+}
+@keyframes pip{
+  0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(224,185,95,.45)}
+  55%{opacity:.45;box-shadow:0 0 0 7px rgba(224,185,95,0)}
+}
+
+/* ─── Сетка первого экрана ─── */
+.hero-inner{
+  position:relative;
+  display:grid;grid-template-columns:1.25fr .75fr;
+  gap:clamp(34px,6vw,76px);align-items:center;
+}
+
+.hero-name{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(2.6rem,8.4vw,5.6rem);
+  line-height:.94;letter-spacing:-.04em;text-transform:uppercase;
+  margin-bottom:22px;
+}
+.hero-name .tint{
+  background:linear-gradient(96deg,var(--gold-lt),#F4E3BC 42%,var(--gold));
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-role{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--font-mono);font-size:.78rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-lt);
+  margin-bottom:26px;
+}
+.hero-role::after{content:'';flex:1;max-width:120px;height:1px;background:currentColor;opacity:.35}
+
+.hero-desc{
+  font-size:clamp(1rem,1.7vw,1.15rem);
+  color:rgba(246,241,238,.68);
+  max-width:38ch;margin-bottom:40px;
+}
+
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:46px}
+
+.hero-stack{
+  display:flex;flex-wrap:wrap;gap:6px 0;
+  color:rgba(246,241,238,.42);
+}
+.hero-stack li:not(:last-child)::after{content:'/';margin-inline:11px;opacity:.45}
+
+/* ─── Портрет ─── */
+.hero-figure{position:relative;perspective:1000px}
+.hero-figure img{
+  width:100%;border-radius:10px;
+  box-shadow:0 34px 76px rgba(0,0,0,.5);
+  filter:grayscale(.18) brightness(.97) contrast(1.03);
+  transition:filter var(--t-slow) var(--e-out);
+}
+.hero-figure:hover img{filter:grayscale(0) brightness(1) contrast(1.04)}
+.hero-figure::before{
+  content:'';position:absolute;inset:-13px;
+  border:1px solid rgba(224,185,95,.26);border-radius:14px;
+  pointer-events:none;
+}
+
+/* ─── Низ первого экрана ─── */
+.hero-foot{
+  position:absolute;left:0;right:0;bottom:26px;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  color:rgba(246,241,238,.4);
+}
+.hero-foot .drop{
+  width:1px;height:38px;
+  background:linear-gradient(180deg,rgba(224,185,95,.75),transparent);
+  animation:drop 2.4s var(--e-soft) infinite;
+}
+@keyframes drop{
+  0%{transform:scaleY(0);transform-origin:top}
+  52%{transform:scaleY(1);transform-origin:top}
+  53%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* ─── Кнопки ─── */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 26px;border-radius:5px;
+  font-size:.86rem;font-weight:700;letter-spacing:.01em;
+  border:1px solid transparent;
+  transition:background var(--t-hover) var(--e-out),
+             color var(--t-hover) var(--e-out),
+             border-color var(--t-hover) var(--e-out),
+             box-shadow var(--t-ui) var(--e-out);
+  will-change:transform;
+}
+.btn .arr{transition:transform var(--t-ui) var(--e-out)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn--gold{background:var(--gold-lt);color:#2A1E06;box-shadow:0 6px 22px rgba(176,132,34,.22)}
+.btn--gold:hover{background:#F0D089;box-shadow:0 12px 30px rgba(176,132,34,.34)}
+.btn--ghost{border-color:rgba(255,255,255,.26);color:#fff}
+.btn--ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.42)}
+.btn--dark{background:var(--wine);color:#fff}
+.btn--dark:hover{background:var(--wine-dk)}
+.btn--lg{padding:16px 34px;font-size:.94rem}
+
+@media (max-width:900px){
+  .hero{min-height:auto;padding-block:calc(var(--nav-h) + 34px) 92px}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-figure{order:-1;max-width:250px}
+  .hero-top{margin-bottom:30px}
+}
