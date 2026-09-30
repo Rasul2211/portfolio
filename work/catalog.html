@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сайт-каталог — Исраилов Мухаммадрасул</title>
+<meta name="description" content="Сайт-каталог: витрина товаров с фильтрами, корзиной и админкой. React, Python, PostgreSQL.">
+<meta name="theme-color" content="#0E0A0C">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/tokens.css">
+<link rel="stylesheet" href="../styles/layout.css">
+<link rel="stylesheet" href="../styles/components.css">
+<link rel="stylesheet" href="../styles/decor.css">
+<link rel="stylesheet" href="../styles/page.css">
+</head>
+<body>
+
+<div class="grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+<span class="coords" aria-hidden="true">38.5598° N / 68.7870° E</span>
+
+<header class="nav" id="nav">
+  <a href="../index.html" class="nav-logo">Rasul Israilov<span>.</span></a>
+  <nav class="nav-links" id="navLinks" aria-label="Основное меню">
+    <a href="../index.html#projects">Услуги</a>
+    <a href="../index.html#about">Обо мне</a>
+    <a href="../index.html#skills">Навыки</a>
+    <a href="../index.html#contact" class="nav-cta" data-magnetic>Связаться</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="mono page-back">
+      <span class="arr" aria-hidden="true">←</span> Все работы
+    </a>
+    <p class="mono page-kicker">01 — Интернет-торговля</p>
+    <h1 class="page-title">Сайт-каталог</h1>
+    <p class="page-lede">
+      Витрина товаров, которой владелец управляет сам: добавляет позиции,
+      меняет цены и убирает то, чего нет в наличии — без звонка разработчику.
+    </p>
+
+    <dl class="page-meta">
+      <div><dt class="mono">Фронтенд</dt><dd>React</dd></div>
+      <div><dt class="mono">Бэкенд</dt><dd>Python</dd></div>
+      <div><dt class="mono">База</dt><dd>PostgreSQL</dd></div>
+      <div><dt class="mono">Срок</dt><dd>от 3 недель</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="page-shot">
+  <div class="wrap">
+    <figure>
+      <img src="../images/wire-catalog.svg" alt="Схема интерфейса каталога: фильтры слева, сетка карточек товаров справа" width="640" height="440">
+      <figcaption class="mono">Схема интерфейса — расположение блоков, не снимок экрана</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="wrap">
+
+    <div class="page-grid rv">
+      <h2>Задача</h2>
+      <div>
+        <p>Товар показывают в мессенджере: фотографии вперемешку с перепиской, цены теряются, наличие приходится уточнять сообщением. Покупатель не видит ассортимент целиком и уходит.</p>
+        <p>Плюс всё держится на одном человеке — он и продавец, и каталог, и справочная.</p>
+      </div>
+    </div>
+
+    <div class="page-grid rv">
+      <h2>Решение</h2>
+      <div>
+        <p>Витрина с понятной навигацией и фильтрами, чтобы покупатель сам нашёл нужное, увидел цену и наличие, положил в корзину и оставил заказ.</p>
+        <ul class="page-list">
+          <li>Каталог с категориями, фильтрами и поиском</li>
+          <li>Карточка товара: фотографии, цена, размеры, наличие</li>
+          <li>Корзина и оформление заказа без регистрации</li>
+          <li>Админка: добавить товар, поменять цену, скрыть позицию</li>
+          <li>Заказы приходят в мессенджер владельцу</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-grid rv">
+      <h2>Что меняется</h2>
+      <div>
+        <p>Ассортимент виден целиком и в любое время. Цены и наличие правит сам владелец через админку. Заказы собираются в одном месте, а не в переписке.</p>
+      </div>
+    </div>
+
+    <div class="page-grid rv">
+      <h2>Что входит</h2>
+      <div>
+        <ul class="page-list">
+          <li>Макет и согласование до начала вёрстки</li>
+          <li>Адаптив: телефон, планшет, десктоп</li>
+          <li>Исходники и доступы передаются заказчику</li>
+          <li>Короткая инструкция по админке</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<nav class="page-next" aria-label="Следующая работа">
+  <div class="wrap">
+    <a href="dashboard.html">
+      <span>
+        <span class="mono">Следующая работа</span>
+        <strong>Личный кабинет</strong>
+      </span>
+      <span class="work-go" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</nav>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <img src="../images/logo.png" alt="Rasul Israilov — Full Stack Developer" class="footer-logo" width="541" height="542" loading="lazy">
+      <p class="footer-says">Открыт к работе и совместным проектам</p>
+    </div>
+    <div class="footer-bottom">
+      <span class="mono">Исраилов Мухаммадрасул · Душанбе · 2026</span>
+      <nav class="footer-social" aria-label="Ссылки">
+        <a href="mailto:irasik2211@gmail.com">Email</a>
+        <a href="https://github.com/Rasul2211" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

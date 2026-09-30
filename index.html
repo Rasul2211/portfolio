@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="styles/layout.css">
 <link rel="stylesheet" href="styles/hero.css">
 <link rel="stylesheet" href="styles/components.css">
+<link rel="stylesheet" href="styles/decor.css">
+<link rel="stylesheet" href="styles/page.css">
 </head>
 <body>
 
@@ -27,6 +29,7 @@
 <div class="grid-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 <div class="noise" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"><i></i></div>
+<span class="coords" aria-hidden="true">38.5598° N / 68.7870° E</span>
 
 <header class="nav" id="nav">
   <a href="#hero" class="nav-logo">Rasul Israilov<span>.</span></a>
@@ -114,36 +117,56 @@
 </div>
 
 <!-- ═══════════ 01 УСЛУГИ ═══════════ -->
-<section class="section" id="projects">
+<section class="section has-brackets" id="projects" data-brackets>
   <div class="wrap">
     <header class="sec-head">
       <p class="mono sec-index rv">01 — Selected work</p>
       <h2 class="sec-title rv" data-mask-words>Что мы делаем</h2>
-      <p class="sec-sub rv">Задачи, которые берём и доводим до рабочего состояния.</p>
+      <p class="sec-sub rv">Задачи, которые берём и доводим до рабочего состояния. Откройте любую — внутри подробности.</p>
     </header>
 
-    <div class="cards">
-      <article class="card rv">
-        <span class="mono card-num">01</span>
-        <h3>Сайт-каталог</h3>
-        <p>Витрина товаров с фильтрами, корзиной и админкой для правок без разработчика.</p>
-        <ul class="tags"><li>React</li><li>Python</li><li>PostgreSQL</li></ul>
+    <div class="work" data-work>
+      <article class="work-item rv" data-preview="images/wire-catalog.svg">
+        <a class="work-link" href="work/catalog.html">
+          <span class="mono work-index">01</span>
+          <h3 class="work-title">Сайт-каталог</h3>
+          <ul class="tags work-tags"><li>React</li><li>Python</li><li>PostgreSQL</li></ul>
+          <span class="work-go" aria-hidden="true">↗</span>
+        </a>
       </article>
 
-      <article class="card rv">
-        <span class="mono card-num">02</span>
-        <h3>Личный кабинет</h3>
-        <p>Авторизация, роли, история заказов и выгрузка отчётов в таблицу.</p>
-        <ul class="tags"><li>React</li><li>API</li><li>JWT</li></ul>
+      <article class="work-item rv" data-preview="images/wire-dashboard.svg">
+        <a class="work-link" href="work/dashboard.html">
+          <span class="mono work-index">02</span>
+          <h3 class="work-title">Личный кабинет</h3>
+          <ul class="tags work-tags"><li>React</li><li>API</li><li>JWT</li></ul>
+          <span class="work-go" aria-hidden="true">↗</span>
+        </a>
       </article>
 
-      <article class="card rv">
-        <span class="mono card-num">03</span>
-        <h3>Лендинг с заявками</h3>
-        <p>Одностраничник с формой, которая отправляет заявки прямо в мессенджер.</p>
-        <ul class="tags"><li>JavaScript</li><li>CSS</li><li>Telegram Bot</li></ul>
+      <article class="work-item rv" data-preview="images/wire-landing.svg">
+        <a class="work-link" href="work/landing.html">
+          <span class="mono work-index">03</span>
+          <h3 class="work-title">Лендинг с заявками</h3>
+          <ul class="tags work-tags"><li>JavaScript</li><li>CSS</li><li>Telegram Bot</li></ul>
+          <span class="work-go" aria-hidden="true">↗</span>
+        </a>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════ ЗАЯВЛЕНИЕ ═══════════ -->
+<section class="statement">
+  <div class="wrap">
+    <p class="mono sec-index rv">Approach</p>
+    <p class="statement-text" data-statement data-accent="работающий,продукт">
+      Не «сайт под ключ», а работающий продукт, который решает задачу и не разваливается через месяц.
+    </p>
+    <dl class="statement-note rv">
+      <div><dt class="mono">Как работаем</dt><dd>Разбираем задачу, показываем макет, собираем, передаём с доступами.</dd></div>
+      <div><dt class="mono">Что отдаём</dt><dd>Исходники, админку и инструкцию — правки не требуют разработчика.</dd></div>
+    </dl>
   </div>
 </section>
 
