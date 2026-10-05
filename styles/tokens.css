@@ -11,7 +11,8 @@
 
   --text:       #14100F;
   --muted:      #6B6360;
-  --dim:        #9A928D;
+  /* 9A928D давал 3.06 к белому — мелкие подписи не дотягивали до 4.5 */
+  --dim:        #78716C;
   --line:       rgba(20,16,15,.12);
   --line-soft:  rgba(20,16,15,.07);
 
@@ -19,6 +20,9 @@
   --wine-dk:    #6B1029;
   --gold:       #B08422;
   --gold-lt:    #E0B95F;
+  /* тот же золотой, но пригодный для текста на светлом: #B08422 давал 3.4,
+     этот — 4.95. В градиентах по-прежнему используется --gold */
+  --gold-text:  #8F6B1A;
 
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Manrope', system-ui, sans-serif;

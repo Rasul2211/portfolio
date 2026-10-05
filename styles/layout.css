@@ -89,7 +89,7 @@
 .sec-head{margin-bottom:clamp(44px,6vw,68px);max-width:60ch}
 .sec-index{
   display:flex;align-items:center;gap:12px;
-  color:var(--gold);margin-bottom:14px;
+  color:var(--gold-text);margin-bottom:14px;
 }
 .sec-index::after{
   content:'';flex:1;max-width:64px;height:1px;background:currentColor;opacity:.4;

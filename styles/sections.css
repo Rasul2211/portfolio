@@ -95,7 +95,7 @@
 .section--tinted .service:hover{background:var(--paper)}
 .service:hover::after{transform:scaleX(1)}
 
-.service-num{display:block;color:var(--gold);margin-bottom:14px}
+.service-num{display:block;color:var(--gold-text);margin-bottom:14px}
 .service h3{
   font-family:var(--font-display);font-weight:600;
   font-size:1.06rem;letter-spacing:-.015em;margin-bottom:8px;
