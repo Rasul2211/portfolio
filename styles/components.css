@@ -97,13 +97,14 @@
 /* ─── Обо мне ─── */
 .about{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(30px,5vw,68px);align-items:start}
 .about-figure{position:relative}
+/* снимок уже обесцвечен при обработке — здесь только лёгкая досветка */
 .about-figure img{
   width:100%;border-radius:10px;
   box-shadow:0 20px 50px rgba(20,16,15,.14);
-  filter:grayscale(.28);
+  filter:grayscale(.12);
   transition:filter var(--t-slow) var(--e-out);
 }
-.about-figure:hover img{filter:grayscale(0)}
+.about-figure:hover img{filter:grayscale(0) brightness(1.04)}
 .about-lead{
   font-family:var(--font-display);font-weight:600;
   font-size:clamp(1.28rem,2.9vw,1.85rem);
