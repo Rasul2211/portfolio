@@ -8,21 +8,38 @@
   background:var(--ink);
   color:#F6F1EE;
   overflow:hidden;
+
+  /* --mx/--my пишет мышь, --sy пишет прокрутка; складывает CSS ниже */
+  --mx:0;--my:0;--sy:0;
 }
+
+/* Занавес при первой загрузке: короткий, без поддельной загрузки */
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:5;
+  background:var(--ink);pointer-events:none;
+  transform-origin:top;
+  animation:curtain .72s var(--e-out) .08s forwards;
+}
+@keyframes curtain{to{transform:scaleY(0);transform-origin:top}}
 
 /* ─── Фон: два мягких пятна и вертикали ─── */
 .hero-bg{position:absolute;inset:0;pointer-events:none;opacity:0;animation:bgIn .9s var(--e-out) forwards}
 @keyframes bgIn{to{opacity:1}}
 
-.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(8px)}
+.hero-bg .orb{position:absolute;border-radius:50%;filter:blur(8px);will-change:translate}
 .hero-bg .orb-1{
   top:-18%;left:-12%;width:min(64vw,680px);aspect-ratio:1;
   background:radial-gradient(circle,rgba(142,29,58,.5),transparent 66%);
+  translate:calc(var(--mx) * 26px) calc(var(--my) * 20px + var(--sy) * 70px);
 }
 .hero-bg .orb-2{
   right:-16%;bottom:-22%;width:min(46vw,500px);aspect-ratio:1;
   background:radial-gradient(circle,rgba(224,185,95,.16),transparent 68%);
+  translate:calc(var(--mx) * -18px) calc(var(--my) * -14px + var(--sy) * 110px);
 }
+
+/* тонкие вертикали тоже слегка дышат — иначе фон выглядит приклеенным */
+.hero-bg .rules{translate:calc(var(--mx) * 8px) 0}
 .hero-bg .rules{
   position:absolute;inset:0;
   max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter);
@@ -79,9 +96,27 @@
   font-size:clamp(2.6rem,8.4vw,5.6rem);
   line-height:.94;letter-spacing:-.04em;text-transform:uppercase;
   margin-bottom:22px;
+  translate:calc(var(--mx) * 7px) calc(var(--my) * 5px + var(--sy) * -34px);
+  will-change:translate;
 }
-.hero-name .tint{
-  background:linear-gradient(96deg,var(--gold-lt),#F4E3BC 42%,var(--gold));
+
+/* строку имени двигают буквы, а не обёртка — гасим её собственный выезд */
+.hero-name .mask > span{animation:none;transform:none}
+
+/* буква выезжает из-под маски строки */
+.hero-name .ch{
+  display:inline-block;
+  transform:translateY(106%);
+  animation:charUp .86s var(--e-out) forwards;
+  animation-delay:var(--cd,0s);
+}
+@keyframes charUp{to{transform:translateY(0)}}
+/* Градиент живёт на буквах, а не на строке: после разбивки каждая буква —
+   отдельный inline-блок, и заливка строки до них не доходит. JS сшивает
+   куски в одну непрерывную полосу, выставляя размер и сдвиг фона. */
+.hero-name .tint .ch{
+  background-image:linear-gradient(96deg,var(--gold-lt),#F4E3BC 42%,var(--gold));
+  background-repeat:no-repeat;
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
 }
@@ -92,7 +127,12 @@
   text-transform:uppercase;color:var(--gold-lt);
   margin-bottom:26px;
 }
-.hero-role::after{content:'';flex:1;max-width:120px;height:1px;background:currentColor;opacity:.35}
+.hero-role::after{
+  content:'';flex:1;max-width:120px;height:1px;background:currentColor;opacity:.35;
+  transform:scaleX(0);transform-origin:left;
+  animation:ruleIn 1s var(--e-out) .9s forwards;
+}
+@keyframes ruleIn{to{transform:scaleX(1)}}
 
 .hero-desc{
   font-size:clamp(1rem,1.7vw,1.15rem);
@@ -109,7 +149,11 @@
 .hero-stack li:not(:last-child)::after{content:'/';margin-inline:11px;opacity:.45}
 
 /* ─── Портрет ─── */
-.hero-figure{position:relative;perspective:1000px}
+.hero-figure{
+  position:relative;perspective:1000px;
+  translate:calc(var(--mx) * -16px) calc(var(--my) * -12px + var(--sy) * 46px);
+  will-change:translate;
+}
 .hero-figure img{
   width:100%;border-radius:10px;
   box-shadow:0 34px 76px rgba(0,0,0,.5);

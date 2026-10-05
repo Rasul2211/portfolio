@@ -14,8 +14,10 @@ import { initWorkPreview } from './modules/workPreview.js';
 import { initTransitions } from './modules/transitions.js';
 import { initSteps } from './modules/steps.js';
 import { initFaq } from './modules/faq.js';
+import { initHeroMotion } from './modules/heroMotion.js';
 
 initNav();
+initHeroMotion();
 initReveal();
 initDecor();
 initStatement();
