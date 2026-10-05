@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="styles/hero.css">
 <link rel="stylesheet" href="styles/components.css">
 <link rel="stylesheet" href="styles/decor.css">
+<link rel="stylesheet" href="styles/sections.css">
 <link rel="stylesheet" href="styles/page.css">
 </head>
 <body>
@@ -39,8 +40,9 @@
     <a href="#cases">Подход</a>
     <a href="#about">Обо мне</a>
     <a href="#skills">Навыки</a>
+    <a href="#process">Процесс</a>
     <a href="#team">Команда</a>
-    <a href="#reviews">Отзывы</a>
+    <a href="#faq">Вопросы</a>
     <a href="#contact" class="nav-cta" data-magnetic>Связаться</a>
   </nav>
 
@@ -216,11 +218,62 @@
   </div>
 </section>
 
-<!-- ═══════════ 03 ОБО МНЕ ═══════════ -->
+<!-- ═══════════ 03 ПРОЦЕСС ═══════════ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="mono sec-index rv">03 — Process</p>
+      <h2 class="sec-title rv" data-mask-words>Как идёт работа</h2>
+      <p class="sec-sub rv">Что происходит после того, как вы написали. Без сюрпризов на середине пути.</p>
+    </header>
+
+    <div class="steps" data-steps>
+      <span class="steps-line" aria-hidden="true"><i></i></span>
+
+      <article class="step rv">
+        <span class="step-num" aria-hidden="true">01</span>
+        <div>
+          <h3 class="step-title">Разбираем задачу</h3>
+          <p class="step-text">Созваниваемся или переписываемся. Выясняю, что у вас происходит сейчас, что мешает и каким должен быть результат. Задаю неудобные вопросы — лучше сейчас, чем на середине работы.</p>
+          <p class="mono step-meta">Цену и срок называю здесь, до начала</p>
+        </div>
+      </article>
+
+      <article class="step rv">
+        <span class="step-num" aria-hidden="true">02</span>
+        <div>
+          <h3 class="step-title">Показываю макет</h3>
+          <p class="step-text">Сначала картинка, потом код. Вы видите, как будет выглядеть каждый экран, и правите на этом этапе — пока это дёшево и быстро.</p>
+          <p class="mono step-meta">Вёрстка начинается только после «да»</p>
+        </div>
+      </article>
+
+      <article class="step rv">
+        <span class="step-num" aria-hidden="true">03</span>
+        <div>
+          <h3 class="step-title">Собираю</h3>
+          <p class="step-text">Фронтенд, бэкенд, админка. Показываю промежуточный результат, а не пропадаю до сдачи. Проверяю на телефоне, планшете и компьютере.</p>
+          <p class="mono step-meta">Промежуточные версии доступны по ссылке</p>
+        </div>
+      </article>
+
+      <article class="step rv">
+        <span class="step-num" aria-hidden="true">04</span>
+        <div>
+          <h3 class="step-title">Передаю</h3>
+          <p class="step-text">Исходники, доступы и админка — ваши. Показываю, как добавлять товары и менять тексты, чтобы за каждой правкой не приходить ко мне.</p>
+          <p class="mono step-meta">Остаюсь на связи после сдачи</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 04 ОБО МНЕ ═══════════ -->
 <section class="section" id="about">
   <div class="wrap">
     <header class="sec-head">
-      <p class="mono sec-index rv">03 — About</p>
+      <p class="mono sec-index rv">04 — About</p>
       <h2 class="sec-title rv" data-mask-words>Обо мне</h2>
     </header>
 
@@ -250,7 +303,7 @@
 <section class="section section--tinted" id="skills">
   <div class="wrap">
     <header class="sec-head">
-      <p class="mono sec-index rv">04 — Stack</p>
+      <p class="mono sec-index rv">05 — Stack</p>
       <h2 class="sec-title rv" data-mask-words>Навыки</h2>
     </header>
 
@@ -280,7 +333,7 @@
 <section class="section" id="team">
   <div class="wrap">
     <header class="sec-head">
-      <p class="mono sec-index rv">05 — Team</p>
+      <p class="mono sec-index rv">06 — Team</p>
       <h2 class="sec-title rv" data-mask-words>Команда</h2>
       <p class="sec-sub rv">Нас трое. Сначала друзья, потом уже разработчики.</p>
     </header>
@@ -321,7 +374,7 @@
 <section class="section section--tinted" id="reviews">
   <div class="wrap">
     <header class="sec-head">
-      <p class="mono sec-index rv">06 — Reviews</p>
+      <p class="mono sec-index rv">07 — Reviews</p>
       <h2 class="sec-title rv" data-mask-words>Отзывы</h2>
       <p class="sec-sub rv">Что говорят те, для кого мы работали.</p>
     </header>
@@ -375,11 +428,84 @@
   </div>
 </section>
 
-<!-- ═══════════ 07 КОНТАКТЫ ═══════════ -->
+<!-- ═══════════ 08 ВОПРОСЫ ═══════════ -->
+<section class="section section--tinted has-brackets" id="faq" data-brackets>
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="mono sec-index rv">08 — FAQ</p>
+      <h2 class="sec-title rv" data-mask-words>Частые вопросы</h2>
+      <p class="sec-sub rv">То, о чём спрашивают до начала работы.</p>
+    </header>
+
+    <div class="faq" data-faq>
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          Сколько это стоит?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Зависит от объёма: каталог на триста позиций и лендинг на одну страницу стоят по-разному. Опишите задачу — посчитаю и назову цену до начала работы, а не по ходу.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          Сколько времени займёт?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Срок называю вместе с ценой, на первом же этапе. Он зависит от того, сколько экранов, есть ли админка и как быстро приходят от вас тексты и фотографии.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          Что нужно от меня?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Описание задачи своими словами, тексты и фотографии товаров. Если текстов нет — подскажу, что написать. Остальное на мне.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          Кто будет менять цены и добавлять товары потом?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Вы сами, через админку. Передаю доступы и показываю, как ей пользоваться. Звонить мне из-за смены цены не придётся.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          А если результат не понравится?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Поэтому макет идёт до вёрстки. Вы видите каждый экран картинкой и правите, пока это быстро. Код пишу только после вашего согласия на макет.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item rv">
+        <button class="faq-q" type="button">
+          Сайт останется у меня?
+          <span class="faq-sign" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><div>
+          <p>Да. Исходники, домен и хостинг оформляются на вас, доступы передаю полностью. Вы не привязаны ко мне и можете передать проект любому другому разработчику.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ 09 КОНТАКТЫ ═══════════ -->
 <section class="section" id="contact">
   <div class="wrap">
     <header class="sec-head">
-      <p class="mono sec-index rv">07 — Contact</p>
+      <p class="mono sec-index rv">09 — Contact</p>
       <h2 class="sec-title rv" data-mask-words>Контакты</h2>
       <p class="sec-sub rv">Открыт к работе и совместным проектам.</p>
     </header>

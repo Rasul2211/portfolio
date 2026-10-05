@@ -12,6 +12,8 @@ import { initDecor } from './modules/decor.js';
 import { initStatement } from './modules/statement.js';
 import { initWorkPreview } from './modules/workPreview.js';
 import { initTransitions } from './modules/transitions.js';
+import { initSteps } from './modules/steps.js';
+import { initFaq } from './modules/faq.js';
 
 initNav();
 initReveal();
@@ -22,6 +24,8 @@ initProgress();
 initCursor();
 initMagnetic();
 initWorkPreview();
+initSteps();
+initFaq();
 initTransitions();
 bindAnchors();
 

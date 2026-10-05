@@ -1,0 +1,126 @@
+/* ═══ Тёмная секция процесса и блок вопросов ═══ */
+
+/* ─────────── Как идёт работа ─────────── */
+.process{
+  position:relative;z-index:2;
+  padding-block:clamp(90px,13vw,150px);
+  background:var(--ink);color:#F6F1EE;
+  overflow:hidden;
+}
+.process::before{
+  content:'';position:absolute;top:-24%;right:-14%;
+  width:min(58vw,560px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(142,29,58,.32),transparent 68%);
+  pointer-events:none;
+}
+.process .sec-index{color:var(--gold-lt)}
+.process .sec-title{color:#fff}
+.process .sec-sub{color:rgba(246,241,238,.6)}
+
+.steps{position:relative;display:grid;gap:0}
+
+/* линия, которая прочерчивается по мере прокрутки */
+.steps-line{
+  position:absolute;left:0;top:0;bottom:0;width:1px;
+  background:rgba(255,255,255,.12);
+}
+.steps-line i{
+  display:block;width:100%;height:0;
+  background:linear-gradient(180deg,var(--gold-lt),var(--wine));
+  transition:height .2s linear;
+}
+
+.step{
+  position:relative;
+  display:grid;grid-template-columns:minmax(120px,.22fr) 1fr;
+  gap:clamp(20px,4vw,56px);align-items:start;
+  padding:clamp(34px,4.6vw,54px) 0 clamp(34px,4.6vw,54px) clamp(24px,4vw,56px);
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.step:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+
+/* огромная цифра контуром */
+.step-num{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(3.4rem,10vw,7rem);line-height:.82;
+  letter-spacing:-.06em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(255,255,255,.3);
+  transition:-webkit-text-stroke-color .5s var(--e-out),color .5s var(--e-out);
+}
+.step.is-in .step-num{-webkit-text-stroke-color:var(--gold-lt)}
+.step:hover .step-num{color:rgba(224,185,95,.12)}
+
+.step-title{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(1.5rem,4.2vw,2.6rem);
+  line-height:1.06;letter-spacing:-.035em;
+  color:#fff;margin-bottom:14px;text-transform:uppercase;
+}
+.step-text{color:rgba(246,241,238,.62);max-width:48ch;margin-bottom:16px}
+.step-meta{
+  display:inline-flex;align-items:center;gap:9px;
+  color:rgba(246,241,238,.4);
+}
+.step-meta::before{
+  content:'';width:18px;height:1px;background:var(--gold-lt);opacity:.6;
+}
+
+@media (max-width:760px){
+  .step{grid-template-columns:1fr;gap:10px;padding-left:20px}
+}
+
+/* ─────────── Вопросы и ответы ─────────── */
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+
+.faq-q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:clamp(22px,2.8vw,30px) 4px;text-align:left;
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(1.02rem,2.4vw,1.35rem);letter-spacing:-.02em;
+  transition:padding-inline var(--t-ui) var(--e-out),color var(--t-hover) var(--e-out);
+}
+.faq-q:hover{padding-inline:14px;color:var(--wine)}
+
+.faq-sign{
+  position:relative;flex:0 0 auto;
+  width:30px;height:30px;border-radius:50%;
+  border:1px solid var(--line);
+  transition:background var(--t-ui) var(--e-out),
+             border-color var(--t-ui) var(--e-out),
+             transform var(--t-ui) var(--e-out);
+}
+.faq-sign::before,.faq-sign::after{
+  content:'';position:absolute;left:50%;top:50%;
+  background:var(--text);
+  transition:transform var(--t-ui) var(--e-out),background var(--t-ui) var(--e-out);
+}
+.faq-sign::before{width:11px;height:1.5px;transform:translate(-50%,-50%)}
+.faq-sign::after{width:1.5px;height:11px;transform:translate(-50%,-50%)}
+.faq-q[aria-expanded="true"] .faq-sign{
+  background:var(--wine);border-color:var(--wine);transform:rotate(90deg);
+}
+.faq-q[aria-expanded="true"] .faq-sign::before,
+.faq-q[aria-expanded="true"] .faq-sign::after{background:#fff}
+.faq-q[aria-expanded="true"] .faq-sign::after{transform:translate(-50%,-50%) scaleY(0)}
+
+.faq-a{
+  display:grid;grid-template-rows:0fr;
+  transition:grid-template-rows .45s var(--e-out);
+}
+.faq-item[data-open="true"] .faq-a{grid-template-rows:1fr}
+.faq-a > div{overflow:hidden}
+.faq-a p{
+  color:var(--muted);max-width:60ch;
+  padding-bottom:clamp(22px,2.8vw,30px);
+  opacity:0;transform:translateY(-6px);
+  transition:opacity .35s var(--e-out) .08s,transform .35s var(--e-out) .08s;
+}
+.faq-item[data-open="true"] .faq-a p{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .steps-line i{height:100% !important}
+  .step-num{-webkit-text-stroke-color:var(--gold-lt)}
+  .faq-a p{opacity:1;transform:none}
+}
