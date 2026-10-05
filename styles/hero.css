@@ -154,13 +154,14 @@
   translate:calc(var(--mx) * -16px) calc(var(--my) * -12px + var(--sy) * 46px);
   will-change:translate;
 }
+/* фон снимка перекрашен под --ink, поэтому гасить белизну фильтром больше
+   не нужно — осталась лёгкая подсветка при наведении */
 .hero-figure img{
   width:100%;border-radius:10px;
-  box-shadow:0 34px 76px rgba(0,0,0,.5);
-  filter:grayscale(.18) brightness(.97) contrast(1.03);
+  filter:contrast(1.03);
   transition:filter var(--t-slow) var(--e-out);
 }
-.hero-figure:hover img{filter:grayscale(0) brightness(1) contrast(1.04)}
+.hero-figure:hover img{filter:contrast(1.05) brightness(1.06)}
 .hero-figure::before{
   content:'';position:absolute;inset:-13px;
   border:1px solid rgba(224,185,95,.26);border-radius:14px;
