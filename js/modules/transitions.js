@@ -8,6 +8,12 @@ import { env } from '../utils/env.js';
 
 const SUPPORTED = 'startViewTransition' in document;
 
+/* Известная особенность: при межстраничном переходе Chrome роняет в консоль
+   «Uncaught (in promise) AbortError: Transition was skipped». Промис создаёт
+   сам браузер и наружу не отдаёт, а отклоняется тот уже в уходящем документе,
+   поэтому обработчик unhandledrejection до него не достаёт — проверено.
+   На посетителя это не влияет: переход отрабатывает, видно только в консоли. */
+
 export function initTransitions() {
   if (SUPPORTED || env.reducedMotion) return;
 
